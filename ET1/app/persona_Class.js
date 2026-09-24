@@ -125,16 +125,17 @@ class persona extends Validations {
       return "nombre_persona_max_size_ko";
     }
     // Acepta alfabético con ñ, acentos, puntos,  guiones y espacio
-    if (!this.format("nombre_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ.\- ]*$")) {
+    if (!this.format("nombre_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
       this.dom.mostrar_error_campo(
         "nombre_persona",
         "nombre_persona_format_ko",
       );
       return "nombre_persona_format_ko";
     }
+    
     this.dom.mostrar_exito_campo("nombre_persona");
     return true;
-  }
+}
 
   ADD_nuevo_foto_persona_validation() {
     if (!this.exist_file("nuevo_foto_persona")) {
