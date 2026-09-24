@@ -110,14 +110,14 @@ class persona extends Validations {
 	*/
 
   ADD_nombre_persona_validation() {
-    if (!this.min_size("nombre_persona", 4)) {
+    if (!this.min_size("nombre_persona", 2)) {
       this.dom.mostrar_error_campo(
         "nombre_persona",
         "nombre_persona_min_size_ko",
       );
       return "nombre_persona_min_size_ko";
     }
-    if (!this.max_size("nombre_persona", 15)) {
+    if (!this.max_size("nombre_persona", 46)) {
       this.dom.mostrar_error_campo(
         "nombre_persona",
         "nombre_persona_max_size_ko",
