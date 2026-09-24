@@ -71,7 +71,7 @@ class persona extends Validations {
   }
 
   /**********************************************************************************************
-		fields validations for ADD
+		fields validations for ADD 
 	***********************************************************************************************/
 
   /** 
@@ -124,8 +124,8 @@ class persona extends Validations {
       );
       return "nombre_persona_max_size_ko";
     }
-    // allowed format aA to zZ letter
-    if (!this.format("nombre_persona", "^[A-Za-z]*$")) {
+    // Acepta alfabético con ñ, acentos, puntos,  guiones y espacio
+    if (!this.format("nombre_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ.\- ]*$")) {
       this.dom.mostrar_error_campo(
         "nombre_persona",
         "nombre_persona_format_ko",
