@@ -174,7 +174,7 @@ class persona extends Validations {
     this.dom.mostrar_exito_campo("telefono_persona");
     return true;
     }
-  }
+  
 
   ADD_email_persona_validation(){
     if (!this.format("email_persona", "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
