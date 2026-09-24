@@ -1,12 +1,12 @@
 let persona_def_tests = Array(
     //campos no ficheros
-    Array('persona','nombre_persona','input',1,'cumple tamaño minimo','min_size','ADD','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 4 y 20 caracteres'),
-    Array('persona','nombre_persona','input',2,'cumple tamaño maximo','max_size','ADD','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 4 y 20 caracteres'),
-    Array('persona','nombre_persona','input',3,'cumple formato','format','ADD','nombre_persona_format_ko','Formato inválido. Debe estar entre 4 y 20 caracteres alfabéticos'),
+    Array('persona','nombre_persona','input',1,'cumple tamaño minimo','min_size','ADD','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'),
+    Array('persona','nombre_persona','input',2,'cumple tamaño maximo','max_size','ADD','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'),
+    Array('persona','nombre_persona','input',3,'cumple formato','format','ADD','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'),
     Array('persona','nombre_persona','input',4,'es correcto','valid','ADD',true,'Nombre persona correcto'),
-    ['persona','nombre_persona','input',5,'cumple tamaño minimo','max_size','EDIT','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 4 y 20 caracteres'],
-    ['persona','nombre_persona','input',6,'cumple tamaño maximo','max_size','EDIT','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 4 y 20 caracteres'],
-    ['persona','nombre_persona','input',7,'cumple formato','format','EDIT','nombre_persona_format_ko','Formato inválido. Debe estar entre 4 y 20 caracteres alfabéticos'],
+    ['persona','nombre_persona','input',5,'cumple tamaño minimo','max_size','EDIT','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',6,'cumple tamaño maximo','max_size','EDIT','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',7,'cumple formato','format','EDIT','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
     ['persona','nombre_persona','input',8,'es correcto','valid','EDIT',true,'Nombre persona correcto'],
     Array('persona','nuevo_foto_persona','file',9,'existe fichero en foto_persona','exist_file','ADD','foto_persona_exist_file_ko','No existe foto. Debe subir una foto en jpg'),
     Array('persona','nuevo_foto_persona','file',10,'foto persona formato incorrecto','format_name_file','ADD','foto_persona_format_name_file_ko','nombre de foto incorrecto. Deben ser alfabeticos sin acentos'),
