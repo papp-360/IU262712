@@ -14,14 +14,14 @@ let persona_def_tests = Array(
 );
 
 let persona_pruebas = Array(
-    Array('persona','nombre_persona',1,1,'ADD',{nombre_persona:'aa'},'nombre_persona_min_size_ko'),
-    Array('persona','nombre_persona',2,2,'ADD',{nombre_persona:'a'.repeat(20)},'nombre_persona_max_size_ko'),
+    Array('persona','nombre_persona',1,1,'ADD',{nombre_persona:'a'},'nombre_persona_min_size_ko'),
+    Array('persona','nombre_persona',2,2,'ADD',{nombre_persona:'a'.repeat(50)},'nombre_persona_max_size_ko'),
     Array('persona','nombre_persona',3,3,'ADD',{nombre_persona:'aaaaaa1'},'nombre_persona_format_ko'),
     Array('persona','nombre_persona',4,4,'ADD',{nombre_persona:'javi'},true),
-    ['persona','nombre_persona',5,5,'EDIT',{nombre_persona:'aa'},'nombre_persona_min_size_ko'],
-    ['persona','nombre_persona',6,6,'EDIT',{nombre_persona:'aaaaaaaaaaaaaaaaaaaaa'},'nombre_persona_max_size_ko'],
+    ['persona','nombre_persona',5,5,'EDIT',{nombre_persona:'a'},'nombre_persona_min_size_ko'],
+    ['persona','nombre_persona',6,6,'EDIT',{nombre_persona:'a'.repeat(50)},'nombre_persona_max_size_ko'],
     ['persona','nombre_persona',7,7,'EDIT',{nombre_persona:'aaaaaa1'},'nombre_persona_format_ko'],
-    ['persona','nombre_persona',8,8,'EDIT',{nombre_persona:'javi6'},true],
+    ['persona','nombre_persona',8,8,'EDIT',{nombre_persona:'javi'},true],
     Array('persona','nuevo_foto_persona',9,9,'ADD',{},'nuevo_foto_persona_not_exist_file_ko'),
     ['persona','nuevo_foto_persona',10,10,'ADD',{nuevo_foto_persona:{format_name_file:'nombrejpg00.jpg',type_file:'image/jpeg',max_size_file:200}},'nuevo_foto_persona_format_name_file_ko'],
     ['persona','nuevo_foto_persona',11,11,'ADD',{nuevo_foto_persona:{format_name_file:'nombrejpg.jpg',type_file:'image/jpeg',max_size_file:2000000000}},'nuevo_foto_persona_max_size_file_ko'],
