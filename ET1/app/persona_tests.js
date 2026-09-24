@@ -15,11 +15,11 @@ let persona_def_tests = Array(
 
 let persona_pruebas = Array(
     ['persona','nombre_persona',1,1,'ADD',{nombre_persona:'a'},'nombre_persona_min_size_ko'],
-    ['persona','nombre_persona',2,2,'ADD',{nombre_persona:'a'.repeat(50)},'nombre_persona_max_size_ko'],
+    ['persona','nombre_persona',2,2,'ADD',{nombre_persona:'a'.repeat(45)},'nombre_persona_max_size_ko'],
     ['persona','nombre_persona',3,3,'ADD',{nombre_persona:'aaaaaa1'},'nombre_persona_format_ko'],
     ['persona','nombre_persona',4,4,'ADD',{nombre_persona:'javi'},true],
     ['persona','nombre_persona',5,5,'EDIT',{nombre_persona:'a'},'nombre_persona_min_size_ko'],
-    ['persona','nombre_persona',6,6,'EDIT',{nombre_persona:'a'.repeat(50)},'nombre_persona_max_size_ko'],
+    ['persona','nombre_persona',6,6,'EDIT',{nombre_persona:'a'.repeat(45)},'nombre_persona_max_size_ko'],
     ['persona','nombre_persona',7,7,'EDIT',{nombre_persona:'aaaaaa1'},'nombre_persona_format_ko'],
     ['persona','nombre_persona',8,8,'EDIT',{nombre_persona:'javi'},true],
     ['persona','nuevo_foto_persona',9,9,'ADD',{},'nuevo_foto_persona_not_exist_file_ko'],
