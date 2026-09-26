@@ -138,8 +138,18 @@ class persona extends Validations {
 }
 
   ADD_fechaNacimiento_persona_validation(){
-    if (!this.format("fechaNacimiento_persona", "^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$")) {
+    if (!this.format("fechaNacimiento_persona", "^\d{1,2}\/\d{1,2}\/\d{4}$")) {
       this.dom.mostrar_error_campo("fechaNacimiento_persona", "fechaNacimiento_persona_format_ko");
+    }
+    //Comprobar que la fecha no sea superior a la actual
+    if (condition) {
+      
+    }
+
+    //Comprobar que la fecha sea posible
+    if (!this.format("fechaNacimiento_persona", "^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/(19[2-9][0-9]|20[0-2][0-9])$")) {
+      this.dom.mostrar_error_campo("fechaNacimiento_persona", "fechaNacimiento_persona_fecha_valida_ko");
+      
     }
 
     this.dom.mostrar_exito_campo("fechaNacimiento_persona");
