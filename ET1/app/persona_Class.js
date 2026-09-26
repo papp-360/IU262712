@@ -81,20 +81,16 @@ class persona extends Validations {
 
 	*/
   ADD_dni_validation() {
-    if (!this.min_size("dni", 9)) {
-      this.dom.mostrar_error_campo("dni", "dni_min_size_ko");
-      return "dni_min_size_ko";
-    }
-    if (!this.max_size("dni", 9)) {
-      this.dom.mostrar_error_campo("dni", "dni_max_size_ko");
-      return "dni_max_size_ko";
-    }
-
-    if (!this.format("dni", "^[0-9]{8}[A-Z]")) {
+    //Con la validacion de formato también evitamos errores de tamaño
+    if (!this.format("dni", "^[0-9]{8}[A-Z]$")) {
       this.dom.mostrar_error_campo("dni", "dni_format_ko");
       return "dni_format_ko";
     }
 
+    //Validar que el dni sea correcto
+    if (condition) {
+      
+    }
     this.dom.mostrar_exito_campo("dni");
     return true;
   }
