@@ -257,6 +257,11 @@ class persona extends Validations {
     }
   }
 
+
+  /**********************************************************************************************
+		fields validations for EDIT
+	***********************************************************************************************/
+
   EDIT_nombre_persona_validation() {
     return this.ADD_nombre_persona_validation();
   }
@@ -290,4 +295,12 @@ class persona extends Validations {
     this.dom.mostrar_exito_campo("nuevo_foto_persona");
     return true;
   }
+
+
+
+
+  /**********************************************************************************************
+		fields validations for SEARCH 
+	***********************************************************************************************/
+
 }
