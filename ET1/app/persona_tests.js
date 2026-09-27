@@ -5,19 +5,19 @@ let persona_def_tests = Array(
     ['persona','dni','input',2,'es correcto','valid','ADD',true,'DNI correcto'],
 
     //--------------------nombre_persona--------------------
-    ['persona','nombre_persona','input',2,'cumple tamaño minimo','min_size','ADD','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
-    ['persona','nombre_persona','input',3,'cumple tamaño maximo','max_size','ADD','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
-    ['persona','nombre_persona','input',4,'cumple formato','format','ADD','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
-    ['persona','nombre_persona','input',5,'es correcto','valid','ADD',true,'Nombre persona correcto'],
-    ['persona','nombre_persona','input',6,'cumple tamaño minimo','max_size','EDIT','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
-    ['persona','nombre_persona','input',7,'cumple tamaño maximo','max_size','EDIT','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
-    ['persona','nombre_persona','input',8,'cumple formato','format','EDIT','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
-    ['persona','nombre_persona','input',9,'es correcto','valid','EDIT',true,'Nombre persona correcto'],
+    ['persona','nombre_persona','input',3,'cumple tamaño minimo','min_size','ADD','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',4,'cumple tamaño maximo','max_size','ADD','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',5,'cumple formato','format','ADD','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
+    ['persona','nombre_persona','input',6,'es correcto','valid','ADD',true,'Nombre persona correcto'],
+    ['persona','nombre_persona','input',7,'cumple tamaño minimo','max_size','EDIT','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',8,'cumple tamaño maximo','max_size','EDIT','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',9,'cumple formato','format','EDIT','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
+    ['persona','nombre_persona','input',10,'es correcto','valid','EDIT',true,'Nombre persona correcto'],
 
     //--------------------nuevo_foto_persona--------------------
-    ['persona','nuevo_foto_persona','file',10,'existe fichero en foto_persona','exist_file','ADD','foto_persona_exist_file_ko','No existe foto. Debe subir una foto en jpg'],
-    ['persona','nuevo_foto_persona','file',11,'foto persona formato incorrecto','format_name_file','ADD','foto_persona_format_name_file_ko','nombre de foto incorrecto. Deben ser alfabeticos sin acentos'],
-    ['persona','nuevo_foto_persona','file',12,'foto persona tamaño excesivo','max_size_file','ADD','foto_persona_max_size_file_ko','Tamaño fichero foto excesivo. Deben ser menor de 20000 bytes'],
+    ['persona','nuevo_foto_persona','file',11,'existe fichero en foto_persona','exist_file','ADD','foto_persona_exist_file_ko','No existe foto. Debe subir una foto en jpg'],
+    ['persona','nuevo_foto_persona','file',12,'foto persona formato incorrecto','format_name_file','ADD','foto_persona_format_name_file_ko','nombre de foto incorrecto. Deben ser alfabeticos sin acentos'],
+    ['persona','nuevo_foto_persona','file',13,'foto persona tamaño excesivo','max_size_file','ADD','foto_persona_max_size_file_ko','Tamaño fichero foto excesivo. Deben ser menor de 20000 bytes'],
 );
 
 let persona_pruebas = Array(
