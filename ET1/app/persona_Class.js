@@ -88,8 +88,9 @@ class persona extends Validations {
     }
 
     //Validar que el dni sea correcto
-    if (condition) {
-      
+    if (!(this.verificar_formato_dni('alumnograduacion_dni') === true)) {
+      this.dom.mostrar_error_campo("dni", "dni_format_ko");
+      return "dni_format_ko";
     }
 
     this.dom.mostrar_exito_campo("dni");
@@ -352,4 +353,30 @@ class persona extends Validations {
 		fields validations for SEARCH 
 	***********************************************************************************************/
 
+
+
+  verificar_formato_dni(id_campo) {
+
+    	if (document.getElementById(id_campo).value === '') {
+        	return false;
+    	}
+
+    	let dni = document.getElementById(id_campo).value.toUpperCase();
+    	const dni_letters = "TRWAGMYFPDXBNJZSQVHLCKE";
+    	const dni_regex = '^[0-9]{8}[A-Z]$';
+
+    	let numero, letra, letra_calculada;
+
+    	if (this.validations.format(id_campo, dni_regex)) {
+        
+        	numero = dni.substr(0, 8);
+        	letra = dni.charAt(8);
+        	letra_calculada = dni_letters.charAt(numero % 23);
+
+        	return (letra === letra_calculada); // Devuelve true si coinciden, false si no
+    
+    	}  else {
+        return false; // No cumple el formato de DNI
+    	}
+	}
 }
