@@ -57,7 +57,7 @@ var usuario_def_tests = [
   ["usuario", "contrasena", "input", 27, "Validar contrasena correcta en EDIT", "EDIT", true, "Contrasena correcta en EDIT"],
 
 //------------------------------------------------------------
-// Atributo: id_rol (numerico min 1 max digitos, elemento select)
+// Atributo: id_rol (numerico min 1 max 11 digitos, elemento select)
 //------------------------------------------------------------
 
 // ----- id_rol ADD -------
@@ -161,8 +161,8 @@ var usuario_pruebas = [
 	["usuario", "contrasena", 21, 47, "ADD", {"contrasena": "p".repeat(45)}, true],
 
   // Test22: contrasena_format_KO (alfabético sin acentos ni ñ)
-	["usuario", "contrasena", 22, 48, "ADD", {"contrasena": "passw\u00f1ord"}, "contrasena_format_KO"],
-	["usuario", "contrasena", 22, 49, "ADD", {"contrasena": "passw\u00f3rd"}, "contrasena_format_KO"],
+	["usuario", "contrasena", 22, 48, "ADD", {"contrasena": "usuariño"}, "contrasena_format_KO"],
+	["usuario", "contrasena", 22, 49, "ADD", {"contrasena": "usuarió"}, "contrasena_format_KO"],
 	["usuario", "contrasena", 22, 50, "ADD", {"contrasena": "pass1234"}, "contrasena_format_KO"],
 	["usuario", "contrasena", 22, 51, "ADD", {"contrasena": "pass word"}, "contrasena_format_KO"],
 	["usuario", "contrasena", 22, 52, "ADD", {"contrasena": "passwordsegura"}, true],

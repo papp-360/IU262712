@@ -69,7 +69,7 @@ var rol_def_tests = [
 
 var rol_pruebas = [
   // --- ID_ROL ADD ---
-  //Test56-61: id_rol ADD
+  //Test1-8: id_rol ADD
   ["rol", "id_rol", 1, 1, "ADD", {"id_rol": "abc"}, "id_rol_format_KO"],
   ["rol", "id_rol", 1, 2, "ADD", {"id_rol": "12a"}, "id_rol_format_KO"],
   ["rol", "id_rol", 1, 3, "ADD", {"id_rol": "1"}, true],
@@ -102,7 +102,7 @@ var rol_pruebas = [
   ["rol", "rol_name", 9, 19, "ADD", {"rol_name": "admin"}, true],
   ["rol", "rol_name", 10, 20, "ADD", {"rol_name": "a".repeat(49)}, "rol_name_max_size_KO"], 
   ["rol", "rol_name", 10, 21, "ADD", {"rol_name": "a".repeat(48)}, true],
-  ["rol", "rol_name", 11, 22, "ADD", {"rol_name": "rol_con_n\u00f1"}, "rol_name_format_KO"],
+  ["rol", "rol_name", 11, 22, "ADD", {"rol_name": "rol_con_ñ"}, "rol_name_format_KO"],
   ["rol", "rol_name", 11, 23, "ADD", {"rol_name": "rol123"}, "rol_name_format_KO"],
   ["rol", "rol_name", 11, 24, "ADD", {"rol_name": "administrador"}, true],
   ["rol", "rol_name", 12, 25, "ADD", {"rol_name": "coordinador"}, true],
@@ -128,7 +128,7 @@ var rol_pruebas = [
   ["rol", "rol_name", 19, 39, "SEARCH", {"rol_name": "admin"}, true],
 
   // --- ROL_DESCRIPTION ADD ---
-  //Test40-28: rol description ADD
+  //Test40-48: rol description ADD
   ["rol", "rol_description", 20, 40, "ADD", {"rol_description": "desc"}, "rol_description_min_size_KO"],
   ["rol", "rol_description", 20, 41, "ADD", {"rol_description": "roles"}, true],
   ["rol", "rol_description", 21, 42, "ADD", {"rol_description": "d".repeat(201)}, "rol_description_max_size_KO"],
