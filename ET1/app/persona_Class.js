@@ -3,6 +3,7 @@ class persona extends Validations {
     super();
     this.dom = new dom();
     this.nombreentidad = "persona";
+    this.validations = new Validations();
 
     if (esTest == "test") {
     } else {
@@ -304,6 +305,10 @@ class persona extends Validations {
     return this.ADD_apellidos_persona_validation();
   }
 
+  EDIT_fechaNacimiento_persona_validation(){
+    return this.ADD_fechaNacimiento_persona_validation();
+  }
+
   EDIT_direccion_persona_validation(){
     return this.EDIT_direccion_persona_validation();
   }
@@ -355,6 +360,10 @@ class persona extends Validations {
 
 
 
+  /**********************************************************************************************
+		métodos adicionales
+	***********************************************************************************************/
+
   verificar_formato_dni(id_campo) {
 
     	if (document.getElementById(id_campo).value === '') {
@@ -379,4 +388,8 @@ class persona extends Validations {
         return false; // No cumple el formato de DNI
     	}
 	}
+
+  verificar_fechaNacimiento_valida(){
+
+  }
 }
