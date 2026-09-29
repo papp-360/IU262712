@@ -9,10 +9,47 @@ let persona_def_tests = Array(
     ['persona','nombre_persona','input',4,'cumple tamaño maximo','max_size','ADD','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
     ['persona','nombre_persona','input',5,'cumple formato','format','ADD','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
     ['persona','nombre_persona','input',6,'es correcto','valid','ADD',true,'Nombre persona correcto'],
-    ['persona','nombre_persona','input',7,'cumple tamaño minimo','max_size','EDIT','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',7,'cumple tamaño minimo','min_size','EDIT','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
     ['persona','nombre_persona','input',8,'cumple tamaño maximo','max_size','EDIT','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
     ['persona','nombre_persona','input',9,'cumple formato','format','EDIT','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
     ['persona','nombre_persona','input',10,'es correcto','valid','EDIT',true,'Nombre persona correcto'],
+
+    //--------------------apellidos_persona--------------------
+    ['persona','apellidos_persona','input',11,'cumple tamaño minimo','min_size','ADD','apellidos_persona_min_size_ko','Tamaño muy corto. Debe estar entre 3 y 100 caracteres'],
+    ['persona','apellidos_persona','input',12,'cumple tamaño maximo','max_size','ADD','apellidos_persona_max_size_ko','Tamaño muy grande. Debe estar entre 3 y 100 caracteres'],
+    ['persona','apellidos_persona','input',13,'cumple formato','format','ADD','apellidos_persona_format_ko','Formato inválido. Debe estar entre 3 y 100 caracteres alfabéticos'],
+    ['persona','apellidos_persona','input',14,'es correcto','valid','ADD',true,'Apellidos correctos'],
+    ['persona','apellidos_persona','input',15,'cumple tamaño minimo','min_size','EDIT','apellidos_persona_min_size_ko','Tamaño muy corto. Debe estar entre 3 y 100 caracteres'],
+    ['persona','apellidos_persona','input',16,'cumple tamaño maximo','max_size','EDIT','apellidos_persona_max_size_ko','Tamaño muy grande. Debe estar entre 3 y 100 caracteres'],
+    ['persona','apellidos_persona','input',17,'cumple formato','format','EDIT','apellidos_persona_format_ko','Formato inválido. Debe estar entre 3 y 100 caracteres alfabéticos'],
+    ['persona','apellidos_persona','input',18,'es correcto','valid','EDIT',true,'Apellidos corrects'],
+
+
+    //--------------------fechaNacimiento_persona--------------------
+
+    //--------------------direccion_persona--------------------
+    ['persona','direccion_persona','input',11,'cumple tamaño minimo','min_size','ADD','direccion_persona_min_size_ko','Tamaño muy corto. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',12,'cumple tamaño maximo','max_size','ADD','direccion_persona_max_size_ko','Tamaño muy grande. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',17,'cumple formato','format','ADD','direccion_persona_format_ko','Formato inválido. Debe estar entre 10 y 200 caracteres alfabéticos con  acentos, puntos, guiones, punto y coma, espacio y /'],
+    ['persona','direccion_persona','input',14,'es correcto','valid','ADD',true,'Direccion correcta'],
+    ['persona','direccion_persona','input',11,'cumple tamaño minimo','min_size','EDIT','direccion_persona_min_size_ko','Tamaño muy corto. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',12,'cumple tamaño maximo','max_size','EDIT','direccion_persona_max_size_ko','Tamaño muy grande. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',17,'cumple formato','format','EDIT','direccion_persona_format_ko','Formato inválido. Debe estar entre 10 y 200 caracteres alfabéticos con  acentos, puntos, guiones, punto y coma, espacio y /'],
+    ['persona','direccion_persona','input',14,'es correcto','valid','EDIT',true,'Direccion correcta'],
+
+
+    //--------------------telefono_persona--------------------
+    ['persona','telefono_persona','input',17,'cumple formato','format','ADD','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
+    ['persona','telefono_persona','input',14,'es correcto','valid','ADD',true,'Teléfono correcto'],
+    ['persona','telefono_persona','input',17,'cumple formato','format','EDIT','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
+    ['persona','telefono_persona','input',14,'es correcto','valid','EDIT',true,'Teléfono correcto'],
+
+    
+    //--------------------email_persona--------------------
+    ['persona','email_persona','input',17,'cumple formato','format','ADD','email_persona_format_ko','Formato inválido. Debe seguir nombredeusuario@dominio.com'],
+    ['persona','email_persona','input',14,'es correcto','valid','ADD',true,'Email correcto'],
+    ['persona','email_persona','input',17,'cumple formato','format','EDIT','email_persona_format_ko','Formato inválido. Debe seguir nombredeusuario@dominio.com'],
+    ['persona','email_persona','input',14,'es correcto','valid','EDIT',true,'Email correcto'],
 
     //--------------------nuevo_foto_persona--------------------
     ['persona','nuevo_foto_persona','file',11,'existe fichero en foto_persona','exist_file','ADD','foto_persona_exist_file_ko','No existe foto. Debe subir una foto en jpg'],
@@ -38,6 +75,17 @@ let persona_pruebas = Array(
     ['persona','nombre_persona',7,7,'EDIT',{nombre_persona:'aaaaaa1'},'nombre_persona_format_ko'],
     ['persona','nombre_persona',8,8,'EDIT',{nombre_persona:'javi'},true],
     
+    //--------------------apellidos_persona--------------------
+
+
+    //--------------------fechaNacimiento_persona--------------------
+
+    //--------------------direccion_persona--------------------
+
+    //--------------------telefono_persona--------------------
+
+    //--------------------email_persona--------------------
+
     //--------------------nuevo_foto_persona--------------------
     ['persona','nuevo_foto_persona',9,9,'ADD',{},'nuevo_foto_persona_not_exist_file_ko'],
     ['persona','nuevo_foto_persona',10,10,'ADD',{nuevo_foto_persona:{format_name_file:'nombrejpg00.jpg',type_file:'image/jpeg',max_size_file:200}},'nuevo_foto_persona_format_name_file_ko'],
