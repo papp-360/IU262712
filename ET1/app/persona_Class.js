@@ -90,8 +90,8 @@ class persona extends Validations {
 
     //Validar que el dni sea correcto
     if (!(this.verificar_formato_dni('dni') === true)) {
-      this.dom.mostrar_error_campo("dni", "dni_format_ko");
-      return "dni_format_ko";
+      this.dom.mostrar_error_campo("dni", "dni_letra_ko");
+      return "dni_letra_ko";
     }
 
     this.dom.mostrar_exito_campo("dni");
@@ -169,7 +169,7 @@ class persona extends Validations {
       this.dom.mostrar_error_campo("fechaNacimiento_persona", "fechaNacimiento_persona_format_ko");
     }
     //Comprobar que la fecha no sea superior a la actual
-    if (condition) {
+    if (!(this.verificar_fechaNacimiento_valida('fechaNacimiento_persona') === true)) {
       
     }
 
@@ -389,7 +389,12 @@ class persona extends Validations {
     	}
 	}
 
-  verificar_fechaNacimiento_valida(){
+  verificar_fechaNacimiento_valida(id_campo){
+    const campo = document.getElementById(id_campo);
+    if (!campo || campo.value === '') {
+          return false;
+      }
 
+      
   }
 }
