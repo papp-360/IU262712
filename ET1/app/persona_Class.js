@@ -91,6 +91,7 @@ class persona extends Validations {
     if (condition) {
       
     }
+
     this.dom.mostrar_exito_campo("dni");
     return true;
   }
@@ -132,6 +133,34 @@ class persona extends Validations {
     this.dom.mostrar_exito_campo("nombre_persona");
     return true;
 }
+
+  ADD_apellidos_persona_validation() {
+    if (!this.min_size("nombre_persona", 3)) {
+      this.dom.mostrar_error_campo(
+        "nombre_persona",
+        "nombre_persona_min_size_ko",
+      );
+      return "nombre_persona_min_size_ko";
+    }
+    if (!this.max_size("nombre_persona", 100)) {
+      this.dom.mostrar_error_campo(
+        "nombre_persona",
+        "nombre_persona_max_size_ko",
+      );
+      return "nombre_persona_max_size_ko";
+    }
+    // Acepta alfabético con ñ, acentos, puntos,  guiones y espacio
+    if (!this.format("nombre_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
+      this.dom.mostrar_error_campo(
+        "nombre_persona",
+        "nombre_persona_format_ko",
+      );
+      return "nombre_persona_format_ko";
+    }
+    
+    this.dom.mostrar_exito_campo("nombre_persona");
+    return true;
+  }
 
   ADD_fechaNacimiento_persona_validation(){
     if (!this.format("fechaNacimiento_persona", "^\d{1,2}\/\d{1,2}\/\d{4}$")) {
@@ -262,8 +291,28 @@ class persona extends Validations {
 		fields validations for EDIT
 	***********************************************************************************************/
 
+  EDIT_dni_validation() {
+    return this.ADD_dni_validation;
+  }
+
   EDIT_nombre_persona_validation() {
     return this.ADD_nombre_persona_validation();
+  }
+
+  EDIT_apellidos_persona_validation() {
+    return this.ADD_apellidos_persona_validation();
+  }
+
+  EDIT_direccion_persona_validation(){
+    return this.EDIT_direccion_persona_validation();
+  }
+
+  EDIT_telefono_persona_validation(){
+    return this.ADD_telefono_persona_validation();
+  }
+
+  EDIT_email_persona_validation(){
+    return this.ADD_email_persona_validation();
   }
 
   EDIT_nuevo_foto_persona_validation() {
