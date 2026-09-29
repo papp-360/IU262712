@@ -89,7 +89,7 @@ class persona extends Validations {
     }
 
     //Validar que el dni sea correcto
-    if (!(this.verificar_formato_dni('alumnograduacion_dni') === true)) {
+    if (!(this.verificar_formato_dni('dni') === true)) {
       this.dom.mostrar_error_campo("dni", "dni_format_ko");
       return "dni_format_ko";
     }
