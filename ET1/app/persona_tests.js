@@ -89,16 +89,36 @@ let persona_pruebas = Array(
     ['persona','nombre_persona',8,8,'EDIT',{nombre_persona:'javi'},true],
     
     //--------------------apellidos_persona--------------------
-    []
+    ['persona','apellidos_persona',1,1,'ADD',{apellidos_persona:'a'},'apellidos_persona_min_size_ko'],
+    ['persona','apellidos_persona',2,2,'ADD',{apellidos_persona:'a'.repeat(45)},'apellidos_persona_max_size_ko'],
+    ['persona','apellidos_persona',3,3,'ADD',{apellidos_persona:'aaaaaa1'},'apellidos_persona_format_ko'],
+    ['persona','apellidos_persona',4,4,'ADD',{apellidos_persona:'javi'},true],
+    ['persona','apellidos_persona',5,5,'EDIT',{apellidos_persona:'a'},'apellidos_persona_min_size_ko'],
+    ['persona','apellidos_persona',6,6,'EDIT',{apellidos_persona:'a'.repeat(45)},'apellidos_persona_max_size_ko'],
+    ['persona','apellidos_persona',7,7,'EDIT',{apellidos_persona:'aaaaaa1'},'apellidos_persona_format_ko'],
+    ['persona','apellidos_persona',8,8,'EDIT',{apellidos_persona:'javi'},true],
 
     //--------------------fechaNacimiento_persona--------------------
-
+    
     //--------------------direccion_persona--------------------
-
+    ['persona','direccion_persona',1,1,'ADD',{direccion_persona:'a'},'direccion_persona_min_size_ko'],
+    ['persona','direccion_persona',2,2,'ADD',{direccion_persona:'a'.repeat(201)},'direccion_persona_max_size_ko'],
+    ['persona','direccion_persona',3,3,'ADD',{direccion_persona:'aaaaaa1'},'direccion_persona_format_ko'],
+    ['persona','direccion_persona',4,4,'ADD',{direccion_persona:'Calle de la Rosa, 12'},true],
+    ['persona','direccion_persona',5,5,'EDIT',{direccion_persona:'a'},'direccion_persona_min_size_ko'],
+    ['persona','direccion_persona',6,6,'EDIT',{direccion_persona:'a'.repeat(201)},'direccion_persona_max_size_ko'],
+    ['persona','direccion_persona',7,7,'EDIT',{direccion_persona:'aaaaaa1'},'direccion_persona_format_ko'],
+    ['persona','direccion_persona',8,8,'EDIT',{direccion_persona:'Calle de la Rosa, 12'},true],
     //--------------------telefono_persona--------------------
-
+    ['persona','telefono_persona',1,1,'ADD',{telefono_persona:'12345678'},'telefono_persona_format_ko'],
+    ['persona','telefono_persona',2,2,'ADD',{telefono_persona:'123456789'},true],
+    ['persona','telefono_persona',3,3,'EDIT',{telefono_persona:'12345678'},'telefono_persona_format_ko'],
+    ['persona','telefono_persona',4,4,'EDIT',{telefono_persona:'123456789'},true],
     //--------------------email_persona--------------------
-
+    ['persona','email_persona',1,1,'ADD',{email_persona:'javi'},'email_persona_format_ko'],
+    ['persona','email_persona',2,2,'ADD',{email_persona:'javi@ejemplo.com'},true],
+    ['persona','email_persona',3,3,'EDIT',{email_persona:'javi'},'email_persona_format_ko'],
+    ['persona','email_persona',4,4,'EDIT',{email_persona:'javi@ejemplo.com'},true],
     //--------------------nuevo_foto_persona--------------------
     ['persona','nuevo_foto_persona',9,9,'ADD',{},'nuevo_foto_persona_not_exist_file_ko'],
     ['persona','nuevo_foto_persona',10,10,'ADD',{nuevo_foto_persona:{format_name_file:'nombrejpg00.jpg',type_file:'image/jpeg',max_size_file:200}},'nuevo_foto_persona_format_name_file_ko'],
