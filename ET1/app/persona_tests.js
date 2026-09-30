@@ -51,10 +51,23 @@ let persona_def_tests = Array(
     ['persona','email_persona','input',17,'cumple formato','format','EDIT','email_persona_format_ko','Formato inválido. Debe seguir nombredeusuario@dominio.com'],
     ['persona','email_persona','input',14,'es correcto','valid','EDIT',true,'Email correcto'],
 
-    //--------------------nuevo_foto_persona--------------------
-    ['persona','nuevo_foto_persona','file',11,'existe fichero en foto_persona','exist_file','ADD','foto_persona_exist_file_ko','No existe foto. Debe subir una foto en jpg'],
-    ['persona','nuevo_foto_persona','file',12,'foto persona formato incorrecto','format_name_file','ADD','foto_persona_format_name_file_ko','nombre de foto incorrecto. Deben ser alfabeticos sin acentos'],
-    ['persona','nuevo_foto_persona','file',13,'foto persona tamaño excesivo','max_size_file','ADD','foto_persona_max_size_file_ko','Tamaño fichero foto excesivo. Deben ser menor de 20000 bytes'],
+    //---------------------nuevo foto persona--------------------
+   
+    ['persona', 'nuevo_foto_persona', 16, 'Comprobar formato nombre', 'ADD', 'nuevo_foto_persona_format_name_file_KO', 'El formato del nombre es incorrecto. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 17, 'Comprobar formato fichero', 'ADD', 'nuevo_foto_persona_type_file_KO', 'El formato del archivo es demasiado grande. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 18, 'Comprobar tamaño fichero', 'ADD', 'nuevo_foto_persona_max_size_file_KO', 'El tamaño del archivo fotoacto es demasiado grande. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 19, 'Comprobar tamaño minimo', 'ADD', 'nuevo_foto_persona_min_size_KO', 'El campo fotoacto es demasiado pequeño. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 20, 'Comprobar tamaño max nombre', 'ADD', 'nuevo_foto_persona_max_size_KO', 'El tamaño del nombre es demasiado grande. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 21, 'Comprobar valor correcto', 'ADD', true],
+    ['persona', 'nuevo_foto_persona', 22, 'Comprobar formato nombre', 'EDIT', 'nuevo_foto_persona_format_name_file_KO', 'El formato del nombre es incorrecto. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 23, 'Comprobar formato fichero', 'EDIT', 'nuevo_foto_persona_type_file_KO', 'El formato del archivo es demasiado grande. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 24, 'Comprobar tamaño fichero', 'EDIT', 'nuevo_foto_persona_max_size_KO', 'El tamaño del archivo fotoacto es demasiado grande. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 25, 'Comprobar tamaño minimo', 'EDIT', 'nuevo_foto_persona_min_size_KO', 'El campo fotoacto es demasiado pequeño. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 26, 'Comprobar tamaño max nombre', 'EDIT', 'nuevo_foto_persona_max_size_name_KO', 'El tamaño del nombre es demasiado grande. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
+    ['persona', 'nuevo_foto_persona', 27, 'Comprobar valor correcto', 'EDIT', true],
+    //--------------------foto persona(SEARCH)
+    
+
 );
 
 let persona_pruebas = Array(
@@ -76,7 +89,7 @@ let persona_pruebas = Array(
     ['persona','nombre_persona',8,8,'EDIT',{nombre_persona:'javi'},true],
     
     //--------------------apellidos_persona--------------------
-
+    []
 
     //--------------------fechaNacimiento_persona--------------------
 
