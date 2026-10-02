@@ -108,18 +108,5 @@ let accion_pruebas = Array (
     ['accion','descrip_accion',31,33,'SEARCH',{descrip_accion: 'e'.repeat(48)},'descrip_accion_max_size_ko'],
     ['accion','descrip_accion',32,34,'SEARCH',{descrip_accion: '6añadir'},'descrip_accion_format_ko'],
     ['accion','descrip_accion',33,35,'SEARCH',{descrip_accion: ''},true],
-    
-
-
-
-
-
-
-
-
-
-
-
-
 
 )
