@@ -165,7 +165,7 @@ class persona extends Validations {
   }
 
   ADD_fechaNacimiento_persona_validation(){
-    if (!this.format("fechaNacimiento_persona", "^\d{1,2}\/\d{1,2}\/\d{4}$")) {
+    if (!this.format("fechaNacimiento_persona", "^\\d{1,2}\/\\d{1,2}\/\\d{4}$")) {
       this.dom.mostrar_error_campo("fechaNacimiento_persona", "fechaNacimiento_persona_format_ko");
       return "fechaNacimiento_persona_format_ko";
     }
@@ -175,7 +175,7 @@ class persona extends Validations {
     }
 
     //Comprobar que la fecha sea posible
-    if (!this.format("fechaNacimiento_persona", "^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/(19[2-9][0-9]|20[0-2][0-9])$")) {
+    if (!this.format("fechaNacimiento_persona", "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(19[2-9][0-9]|20[0-2][0-9])$")) {
       this.dom.mostrar_error_campo("fechaNacimiento_persona", "fechaNacimiento_persona_fecha_valida_ko");
       return "fechaNacimiento_persona_fecha_valida_ko";
     }
@@ -197,11 +197,11 @@ class persona extends Validations {
         "direccion_persona",
         "direccion_persona_max_size_ko",
       );
-      return "direccion_persona_max_ko";
+      return "direccion_persona_max_size_ko";
     }
-    if (!this.format("direccion_persona", "^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚüÜ.; /-]+$")) {
+    if (!this.format("direccion_persona", "^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚüÜ.;, ºª'\n\r/-]+$")) {
       this.dom.mostrar_error_campo("direccion_persona", "direccion_persona_format_ko");
-      return "direccion_persona_ko";
+      return "direccion_persona_format_ko";
     }
 
     this.dom.mostrar_exito_campo("direccion_persona");
