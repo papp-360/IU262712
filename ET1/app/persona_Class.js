@@ -167,6 +167,7 @@ class persona extends Validations {
   ADD_fechaNacimiento_persona_validation(){
     if (!this.format("fechaNacimiento_persona", "^\d{1,2}\/\d{1,2}\/\d{4}$")) {
       this.dom.mostrar_error_campo("fechaNacimiento_persona", "fechaNacimiento_persona_format_ko");
+      return "fechaNacimiento_persona_format_ko";
     }
     //Comprobar que la fecha no sea superior a la actual
     if (!(this.verificar_fechaNacimiento_valida('fechaNacimiento_persona') === true)) {
@@ -176,7 +177,7 @@ class persona extends Validations {
     //Comprobar que la fecha sea posible
     if (!this.format("fechaNacimiento_persona", "^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/(19[2-9][0-9]|20[0-2][0-9])$")) {
       this.dom.mostrar_error_campo("fechaNacimiento_persona", "fechaNacimiento_persona_fecha_valida_ko");
-      
+      return "fechaNacimiento_persona_fecha_valida_ko";
     }
 
     this.dom.mostrar_exito_campo("fechaNacimiento_persona");
@@ -189,15 +190,18 @@ class persona extends Validations {
         "direccion_persona",
         "direccion_persona_min_size_ko",
       );
+      return "direccion_persona_min_size_ko";
     }
      if (!this.max_size("direccion_persona", 200)) {
       this.dom.mostrar_error_campo(
         "direccion_persona",
         "direccion_persona_max_size_ko",
       );
+      return "direccion_persona_max_ko";
     }
     if (!this.format("direccion_persona", "^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚüÜ.; /-]+$")) {
       this.dom.mostrar_error_campo("direccion_persona", "direccion_persona_format_ko");
+      return "direccion_persona_ko";
     }
 
     this.dom.mostrar_exito_campo("direccion_persona");
@@ -207,15 +211,17 @@ class persona extends Validations {
   ADD_telefono_persona_validation(){
     if (!this.format("telefono_persona", "^[6789][0-9]{8}$")) {
       this.dom.mostrar_error_campo("telefono_persona", "telefono_persona_format_ko");
+      return "telefono_persona_format_ko";
     }
     this.dom.mostrar_exito_campo("telefono_persona");
     return true;
-    }
+  }
   
 
   ADD_email_persona_validation(){
     if (!this.format("email_persona", "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
       this.dom.mostrar_error_campo("email_persona", "email_persona_format_ko");
+      return "email_persona_format_ko";
     }
     this.dom.mostrar_exito_campo("email_persona");
     return true;
