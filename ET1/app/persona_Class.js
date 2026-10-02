@@ -137,30 +137,30 @@ class persona extends Validations {
 }
 
   ADD_apellidos_persona_validation() {
-    if (!this.min_size("nombre_persona", 3)) {
+    if (!this.min_size("apellidos_persona", 3)) {
       this.dom.mostrar_error_campo(
-        "nombre_persona",
-        "nombre_persona_min_size_ko",
+        "apellidos_persona",
+        "apellidos_persona_min_size_ko",
       );
-      return "nombre_persona_min_size_ko";
+      return "apellidos_persona_min_size_ko";
     }
-    if (!this.max_size("nombre_persona", 100)) {
+    if (!this.max_size("apellidos_persona", 100)) {
       this.dom.mostrar_error_campo(
-        "nombre_persona",
-        "nombre_persona_max_size_ko",
+        "apellidos_persona",
+        "apellidos_persona_max_size_ko",
       );
-      return "nombre_persona_max_size_ko";
+      return "apellidos_persona_max_size_ko";
     }
     // Acepta alfabético con ñ, acentos, puntos,  guiones y espacio
-    if (!this.format("nombre_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
+    if (!this.format("apellidos_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
       this.dom.mostrar_error_campo(
-        "nombre_persona",
-        "nombre_persona_format_ko",
+        "apellidos_persona",
+        "apellidos_persona_format_ko",
       );
-      return "nombre_persona_format_ko";
+      return "apellidos_persona_format_ko";
     }
     
-    this.dom.mostrar_exito_campo("nombre_persona");
+    this.dom.mostrar_exito_campo("apellidos_persona");
     return true;
   }
 
