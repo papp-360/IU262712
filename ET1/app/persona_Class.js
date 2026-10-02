@@ -274,12 +274,22 @@ class persona extends Validations {
     // store in key (id element) value (result of field validation method)
     set_result.dni = this.ADD_dni_validation();
     set_result.nombre_persona = this.ADD_nombre_persona_validation();
+    set_result.apellidos_persona = this.ADD_apellidos_persona_validation();
+    set_result.fechaNacimiento_persona = this.ADD_fechaNacimiento_persona_validation();
+    set_result.direccion_persona = this.ADD_direccion_persona_validation();
+    set_result.telefono_persona = this.ADD_telefono_persona_validation();
+    set_result.email_persona = this.ADD_email_persona_validation();
     set_result.nuevo_foto_persona = this.ADD_nuevo_foto_persona_validation();
 
     // calculate combination of all field validations
     let result =
       set_result.dni &
       set_result.nombre_persona &
+      set_result.apellidos_persona &
+      set_result.fechaNacimiento_persona &
+      set_result.direccion_persona &
+      set_result.telefono_persona &
+      set_result.email_persona &
       set_result.nuevo_foto_persona;
 
     // convert the result to boolean
@@ -300,7 +310,7 @@ class persona extends Validations {
 	***********************************************************************************************/
 
   EDIT_dni_validation() {
-    return this.ADD_dni_validation;
+    return this.ADD_dni_validation();
   }
 
   EDIT_nombre_persona_validation() {
@@ -316,7 +326,7 @@ class persona extends Validations {
   }
 
   EDIT_direccion_persona_validation(){
-    return this.EDIT_direccion_persona_validation();
+    return this.ADD_direccion_persona_validation();
   }
 
   EDIT_telefono_persona_validation(){
