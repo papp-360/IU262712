@@ -186,24 +186,18 @@ class persona extends Validations {
 
   ADD_direccion_persona_validation(){
     if (!this.min_size("direccion_persona", 10)) {
-      this.dom.mostrar_error_campo(
-        "direccion_persona",
-        "direccion_persona_min_size_ko",
-      );
+      this.dom.mostrar_error_campo("direccion_persona","direccion_persona_min_size_ko");
       return "direccion_persona_min_size_ko";
     }
      if (!this.max_size("direccion_persona", 200)) {
-      this.dom.mostrar_error_campo(
-        "direccion_persona",
-        "direccion_persona_max_size_ko",
-      );
+      this.dom.mostrar_error_campo("direccion_persona","direccion_persona_max_size_ko");
       return "direccion_persona_max_size_ko";
     }
     if (!this.format("direccion_persona", "^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚüÜ.;, ºª'\n\r/-]+$")) {
       this.dom.mostrar_error_campo("direccion_persona", "direccion_persona_format_ko");
       return "direccion_persona_format_ko";
     }
-
+    
     this.dom.mostrar_exito_campo("direccion_persona");
     return true;
   }
