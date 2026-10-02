@@ -19,7 +19,7 @@ class persona extends Validations {
     var form_content = `
 			<form action="http://193.147.87.202/procesaform.php" method="POST" enctype="multipart/form-data" onsubmit="if (typeof entidad.ADD_submit_persona() === 'object') {return false} else {return true};">
 
-			<label class="label_dni">dni</label>
+			<label class="label_dni">DNI</label>
 			<input type='text' id='dni' name='dni' onblur=" return entidad.ADD_dni_validation();"></input>
 			<span id="span_error_dni"><a id="error_dni"></a></span>
 			<br>
@@ -29,38 +29,38 @@ class persona extends Validations {
 			<span id="span_error_nombre_persona" ><a id="error_nombre_persona"></a></span>
 			<br>
 			
-			<label class="label_apellidos_persona">apellidos</label>
-			<input type='text' id='apellidos_persona' name='apellidos_persona'></input>
+			<label class="label_apellidos_persona">Apellidos</label>
+			<input type='text' id='apellidos_persona' name='apellidos_persona' onblur=" return entidad.ADD_apellidos_persona_validation();"></input>
 			<span id="span_error_apellidos_persona" ><a id="error_apellidos_persona"></a></span>
 			<br>
 			
 			<label class="label_fechaNacimiento_persona">Fecha de Nacimiento</label>
-			<input type='text' id='fechaNacimiento_persona' name='fechaNacimiento_persona'></input>
+			<input type='text' id='fechaNacimiento_persona' name='fechaNacimiento_persona' onblur=" return entidad.ADD_fechaNacimiento_persona_validation();"></input>
 			<span id="span_error_fechaNacimiento_persona" ><a id="error_fechaNacimiento_persona"></a></span>
 			
 			<br>
 			<label class="label_direccion_persona">Dirección Postal</label>
-			<textarea rows="5" cols="33" type='text' id='direccion_persona' name='direccion_persona'></textarea>
+			<textarea rows="5" cols="33" type='text' id='direccion_persona' name='direccion_persona' onblur=" return entidad.ADD_direccion_persona_validation();"></textarea>
 			<span id="span_error_direccion_persona" ><a id="error_direccion_persona"></a></span>
 			<br>
 
 			<label class="label_telefono_persona">Teléfono Persona</label>
-			<input type='text' id='telefono_persona' name='telefono_persona'></input>
+			<input type='text' id='telefono_persona' name='telefono_persona' onblur=" return entidad.ADD_telefono_persona_validation();"></input>
 			<span id="span_error_telefono_persona" ><a id="error_telefono_persona"></a></span>
 			
 			<br>
 			<label class="label_email_persona">Correo Electronico</label>
-			<input type='text' id='email_persona' name='email_persona'></input>
+			<input type='text' id='email_persona' name='email_persona' onblur=" return entidad.ADD_email_persona_validation();"></input>
 			<span id="span_error_email_persona" ><a id="error_email_persona"></a></span>
 
 			<br>
 			<label id="label_foto_persona" class="label_foto_persona">Foto Persona</label>
-			<input type='text' id='foto_persona' name='foto_persona'></input>
+			<input type='text' id='foto_persona' name='foto_persona' onblur=" return entidad.ADD_foto_persona_validation();"></input>
 			<span id="span_error_foto_persona"><a id="error_foto_persona"></a></span>
 			<a id="link_foto_persona" href="http://193.147.87.202/ET2/filesuploaded/files_foto_persona/"><img src="./iconos/FILE.png" /></a>
 			
 			<label id="label_nuevo_foto_persona" class="label_nuevo_foto_persona">Nueva Foto Persona</label>
-			<input type='file' id='nuevo_foto_persona' name='nuevo_foto_persona'></input>
+			<input type='file' id='nuevo_foto_persona' name='nuevo_foto_persona' onblur=" return entidad.ADD_nuevo_foto_persona_validation();"></input>
 			<span id="span_error_nuevo_foto_persona"><a id="error_nuevo_foto_persona"></a></span>
 			<br>
 
