@@ -2,10 +2,8 @@
 // Definicion de tests: rol_def_tests
 // ===============================================================
 var rol_def_tests = [
-  // -------------------------------------------------------------
+  
   // ATRIBUTO: id_rol (numerico min 1 max 11 digitos)
-  // -------------------------------------------------------------
-
   // === id_rol ADD ===
   ["rol", "id_rol", "input", 1, "Validar format numerico id_rol en ADD", "ADD", "id_rol_format_KO", "El identificador de rol debe ser numerico"],
   ["rol", "id_rol", "input", 2, "Validar max size id_rol en ADD (max 11 digitos)", "ADD", "id_rol_max_size_KO", "El identificador de rol excede el tamano maximo"],
@@ -19,11 +17,8 @@ var rol_def_tests = [
   // === id_rol SEARCH ===
   ["rol", "id_rol", "input", 7, "Validar format numerico id_rol en SEARCH", "SEARCH", "id_rol_format_KO", "El identificador de rol no es valido en SEARCH"],
   ["rol", "id_rol", "input", 8, "Validar id_rol correcto en SEARCH", "SEARCH", true, "Busqueda por identificador de rol correcta"],
-
-  // -------------------------------------------------------------
-  // ATRIBUTO: rol_name (alfabetico sin n, min 5 max 48)
-  // -------------------------------------------------------------
   
+  // ATRIBUTO: rol_name (alfabetico sin n, min 5 max 48)
   // === rol_name ADD ===
   ["rol", "rol_name", "input", 9, "Validar min size rol_name en ADD (min 5)", "ADD", "rol_name_min_size_KO", "El nombre de rol es demasiado corto (minimo 5)"],
   ["rol", "rol_name", "input", 10, "Validar max size rol_name en ADD (max 48)", "ADD", "rol_name_max_size_KO", "El nombre de rol es demasiado largo (maximo 48)"],
@@ -41,10 +36,7 @@ var rol_def_tests = [
   ["rol", "rol_name", "input", 18, "Validar format rol_name en SEARCH", "SEARCH", "rol_name_format_KO", "Caracteres no permitidos en la busqueda de nombre de rol"],
   ["rol", "rol_name", "input", 19, "Validar rol_name correcto en SEARCH", "SEARCH", true, "Busqueda de nombre de rol correcta"],
 
-  // -------------------------------------------------------------
   // ATRIBUTO: rol_description (alfabetico con n y signos, min 5 max 200)
-  // -------------------------------------------------------------
-  
   // === rol_description ADD ===
   ["rol", "rol_description", "textarea", 20, "Validar min size rol_description en ADD (min 5)", "ADD", "rol_description_min_size_KO", "La descripcion es demasiado corta (minimo 5)"],
   ["rol", "rol_description", "textarea", 21, "Validar max size rol_description en ADD (max 200)", "ADD", "rol_description_max_size_KO", "La descripcion es demasiado larga (maximo 200)"],
@@ -63,21 +55,18 @@ var rol_def_tests = [
   ["rol", "rol_description", "textarea", 30, "Validar rol_description correcta en SEARCH", "SEARCH", true, "Busqueda de descripcion correcta"]
 ];
 
-// ===============================================================
 // BATERIA DE PRUEBAS: rol_pruebas
-// ===============================================================
 
 var rol_pruebas = [
+
   // --- ID_ROL ADD ---
   //Test1-8: id_rol ADD
   ["rol", "id_rol", 1, 1, "ADD", {"id_rol": "abc"}, "id_rol_format_KO"],
   ["rol", "id_rol", 1, 2, "ADD", {"id_rol": "12a"}, "id_rol_format_KO"],
   ["rol", "id_rol", 1, 3, "ADD", {"id_rol": "1"}, true],
-
   ["rol", "id_rol", 2, 4, "ADD", {"id_rol": "123456789012"}, "id_rol_max_size_KO"],
   ["rol", "id_rol", 2, 5, "ADD", {"id_rol": "12345678901"}, true],  
   ["rol", "id_rol", 2, 6, "ADD", {"id_rol": "1"}, true],
-
   ["rol", "id_rol", 3, 7, "ADD", {"id_rol": "5"}, true],
   ["rol", "id_rol", 3, 8, "ADD", {"id_rol": ""}, "id_rol_format_KO"],
 
