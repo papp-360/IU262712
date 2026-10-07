@@ -65,7 +65,7 @@ let persona_def_tests = Array(
     ['persona', 'nuevo_foto_persona', 25, 'Comprobar tamaño minimo', 'EDIT', 'nuevo_foto_persona_min_size_KO', 'El campo fotoacto es demasiado pequeño. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
     ['persona', 'nuevo_foto_persona', 26, 'Comprobar tamaño max nombre', 'EDIT', 'nuevo_foto_persona_max_size_name_KO', 'El tamaño del nombre es demasiado grande. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
     ['persona', 'nuevo_foto_persona', 27, 'Comprobar valor correcto', 'EDIT', true],
-    //--------------------foto persona(SEARCH)
+    //--------------------foto persona(SEARCH)--------------------
     
 
 );

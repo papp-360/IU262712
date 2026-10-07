@@ -110,10 +110,7 @@ class persona extends Validations {
 
   ADD_nombre_persona_validation() {
     if (!this.min_size("nombre_persona", 2)) {
-      this.dom.mostrar_error_campo(
-        "nombre_persona",
-        "nombre_persona_min_size_ko",
-      );
+      this.dom.mostrar_error_campo("nombre_persona", "nombre_persona_min_size_ko");
       return "nombre_persona_min_size_ko";
     }
     if (!this.max_size("nombre_persona", 45)) {
@@ -125,10 +122,7 @@ class persona extends Validations {
     }
     // Acepta alfabético con ñ, acentos, puntos,  guiones y espacio
     if (!this.format("nombre_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
-      this.dom.mostrar_error_campo(
-        "nombre_persona",
-        "nombre_persona_format_ko",
-      );
+      this.dom.mostrar_error_campo("nombre_persona", "nombre_persona_format_ko");
       return "nombre_persona_format_ko";
     }
     
@@ -138,25 +132,16 @@ class persona extends Validations {
 
   ADD_apellidos_persona_validation() {
     if (!this.min_size("apellidos_persona", 3)) {
-      this.dom.mostrar_error_campo(
-        "apellidos_persona",
-        "apellidos_persona_min_size_ko",
-      );
+      this.dom.mostrar_error_campo("apellidos_persona", "apellidos_persona_min_size_ko");
       return "apellidos_persona_min_size_ko";
     }
     if (!this.max_size("apellidos_persona", 100)) {
-      this.dom.mostrar_error_campo(
-        "apellidos_persona",
-        "apellidos_persona_max_size_ko",
-      );
+      this.dom.mostrar_error_campo("apellidos_persona", "apellidos_persona_max_size_ko");
       return "apellidos_persona_max_size_ko";
     }
     // Acepta alfabético con ñ, acentos, puntos,  guiones y espacio
     if (!this.format("apellidos_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
-      this.dom.mostrar_error_campo(
-        "apellidos_persona",
-        "apellidos_persona_format_ko",
-      );
+      this.dom.mostrar_error_campo("apellidos_persona","apellidos_persona_format_ko");
       return "apellidos_persona_format_ko";
     }
     
@@ -223,31 +208,19 @@ class persona extends Validations {
 
   ADD_nuevo_foto_persona_validation() {
     if (!this.exist_file("nuevo_foto_persona")) {
-      this.dom.mostrar_error_campo(
-        "nuevo_foto_persona",
-        "nuevo_foto_persona_empty_file_ko",
-      );
+      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_empty_file_ko");
       return "nuevo_foto_persona_not_exist_file_ko";
     }
     if (!this.max_size_file("nuevo_foto_persona", 2000)) {
-      this.dom.mostrar_error_campo(
-        "nuevo_foto_persona",
-        "nuevo_foto_persona_max_size_file_ko",
-      );
+      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_max_size_file_ko");
       return "nuevo_foto_persona_max_size_file_ko";
     }
     if (!this.type_file("nuevo_foto_persona", ["image/jpeg"])) {
-      this.dom.mostrar_error_campo(
-        "nuevo_foto_persona",
-        "nuevo_foto_persona_type_file_ko",
-      );
+      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_type_file_ko");
       return "nuevo_foto_persona_type_file_ko";
     }
     if (!this.format_name_file("nuevo_foto_persona", "^[a-zA-Z]*$")) {
-      this.dom.mostrar_error_campo(
-        "nuevo_foto_persona",
-        "nuevo_foto_persona_format_name_file_ko",
-      );
+      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_format_name_file_ko");
       return "nuevo_foto_persona_format_name_file_ko";
     }
     this.dom.mostrar_exito_campo("nuevo_foto_persona");
@@ -337,24 +310,16 @@ class persona extends Validations {
       return true;
     }
     if (!this.max_size_file("nuevo_foto_persona", 2000)) {
-      this.dom.mostrar_error_campo(
-        "nuevo_foto_persona",
-        "nuevo_foto_persona_max_size_file_ko",
-      );
+      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_max_size_file_ko");
       return "nuevo_foto_persona_max_size_file_ko";
     }
     if (!this.type_file("nuevo_foto_persona", ["image/jpeg"])) {
-      this.dom.mostrar_error_campo(
-        "nuevo_foto_persona",
-        "nuevo_foto_persona_type_file_ko",
+      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_type_file_ko"
       );
       return "nuevo_foto_persona_type_file_ko";
     }
     if (!this.format_name_file("nuevo_foto_persona", "[a-zA-Z.]")) {
-      this.dom.mostrar_error_campo(
-        "nuevo_foto_persona",
-        "nuevo_foto_persona_format_name_file_ko",
-      );
+      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_format_name_file_ko");
       return "nuevo_foto_persona_format_name_file_ko";
     }
     this.dom.mostrar_exito_campo("nuevo_foto_persona");
