@@ -2,30 +2,50 @@ let persona_def_tests = Array(
     //campos no ficheros
     //--------------------dni--------------------
     ['persona','dni','input',1,'cumple formato','format','ADD','dni_format_ko','Formato inválido. Debe contener 8 números y una letra al final'],
-    ['persona','dni','input',2,'es correcto','valid','ADD',true,'DNI correcto'], 
+    ['persona','dni','input',2,'es correcto','valid','ADD',true,'DNI correcto'],
+    ['persona','dni','input',3,'cumple formato','format','EDIT','dni_format_ko','Formato inválido. Debe contener 8 números y una letra al final'],
+    ['persona','dni','input',4,'es correcto','valid','EDIT',true,'DNI correcto'],
+    ['persona','dni','input',5,'cumple formato','format','SEARCH','dni_format_ko','Formato inválido. Debe contener 8 números y una letra al final'],
+    ['persona','dni','input',6,'es correcto','valid','SEARCH',true,'DNI correcto'],
 
     //--------------------nombre_persona--------------------
-    ['persona','nombre_persona','input',3,'cumple tamaño minimo','min_size','ADD','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
-    ['persona','nombre_persona','input',4,'cumple tamaño maximo','max_size','ADD','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
-    ['persona','nombre_persona','input',5,'cumple formato','format','ADD','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
-    ['persona','nombre_persona','input',6,'es correcto','valid','ADD',true,'Nombre persona correcto'],
-    ['persona','nombre_persona','input',7,'cumple tamaño minimo','min_size','EDIT','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
-    ['persona','nombre_persona','input',8,'cumple tamaño maximo','max_size','EDIT','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
-    ['persona','nombre_persona','input',9,'cumple formato','format','EDIT','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
-    ['persona','nombre_persona','input',10,'es correcto','valid','EDIT',true,'Nombre persona correcto'],
+    ['persona','nombre_persona','input',7,'cumple tamaño minimo','min_size','ADD','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',8,'cumple tamaño maximo','max_size','ADD','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',9,'cumple formato','format','ADD','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
+    ['persona','nombre_persona','input',10,'es correcto','valid','ADD',true,'Nombre persona correcto'],
+    ['persona','nombre_persona','input',11,'cumple tamaño minimo','min_size','EDIT','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',12,'cumple tamaño maximo','max_size','EDIT','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',13,'cumple formato','format','EDIT','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
+    ['persona','nombre_persona','input',14,'es correcto','valid','EDIT',true,'Nombre persona correcto'],
+    ['persona','nombre_persona','input',15,'cumple tamaño minimo','min_size','SEARCH','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',16,'cumple tamaño maximo','max_size','SEARCH','nombre_persona_max_size_ko','Tamaño muy grande. Debe estar entre 2 y 45 caracteres'],
+    ['persona','nombre_persona','input',17,'cumple formato','format','SEARCH','nombre_persona_format_ko','Formato inválido. Debe estar entre 2 y 45 caracteres alfabéticos'],
+    ['persona','nombre_persona','input',18,'es correcto','valid','SEARCH',true,'Nombre persona correcto'],
 
     //--------------------apellidos_persona--------------------
-    ['persona','apellidos_persona','input',11,'cumple tamaño minimo','min_size','ADD','apellidos_persona_min_size_ko','Tamaño muy corto. Debe estar entre 3 y 100 caracteres'],
-    ['persona','apellidos_persona','input',12,'cumple tamaño maximo','max_size','ADD','apellidos_persona_max_size_ko','Tamaño muy grande. Debe estar entre 3 y 100 caracteres'],
+    ['persona','apellidos_persona','input',19,'cumple tamaño minimo','min_size','ADD','apellidos_persona_min_size_ko','Tamaño muy corto. Debe estar entre 3 y 100 caracteres'],
+    ['persona','apellidos_persona','input',20,'cumple tamaño maximo','max_size','ADD','apellidos_persona_max_size_ko','Tamaño muy grande. Debe estar entre 3 y 100 caracteres'],
     ['persona','apellidos_persona','input',13,'cumple formato','format','ADD','apellidos_persona_format_ko','Formato inválido. Debe estar entre 3 y 100 caracteres alfabéticos'],
     ['persona','apellidos_persona','input',14,'es correcto','valid','ADD',true,'Apellidos correctos'],
     ['persona','apellidos_persona','input',15,'cumple tamaño minimo','min_size','EDIT','apellidos_persona_min_size_ko','Tamaño muy corto. Debe estar entre 3 y 100 caracteres'],
     ['persona','apellidos_persona','input',16,'cumple tamaño maximo','max_size','EDIT','apellidos_persona_max_size_ko','Tamaño muy grande. Debe estar entre 3 y 100 caracteres'],
     ['persona','apellidos_persona','input',17,'cumple formato','format','EDIT','apellidos_persona_format_ko','Formato inválido. Debe estar entre 3 y 100 caracteres alfabéticos'],
     ['persona','apellidos_persona','input',18,'es correcto','valid','EDIT',true,'Apellidos corrects'],
+    ['persona','apellidos_persona','input',19,'cumple tamaño minimo','min_size','SEARCH','apellidos_persona_min_size_ko','Tamaño muy corto. Debe estar entre 3 y 100 caracteres'],
+    ['persona','apellidos_persona','input',20,'cumple tamaño maximo','max_size','SEARCH','apellidos_persona_max_size_ko','Tamaño muy grande. Debe estar entre 3 y 100 caracteres'],
+    ['persona','apellidos_persona','input',21,'cumple formato','format','SEARCH','apellidos_persona_format_ko','Formato inválido. Debe estar entre 3 y 100 caracteres alfabéticos'],
+    ['persona','apellidos_persona','input',22,'es correcto','valid','SEARCH',true,'Apellidos corrects'],
 
 
     //--------------------fechaNacimiento_persona--------------------
+    ['persona','fechaNacimiento_persona','input',19,'cumple formato','format','ADD','fechaNacimiento_persona_format_ko','Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona','fechaNacimiento_persona','input',20,'fecha posible','personalized','ADD','fechaNacimiento_persona_fecha_valida_ko','Fecha nacimiento correcta'],
+    []
+    ['persona','fechaNacimiento_persona','input',20,'es correcto','valid','ADD',true,'Fecha nacimiento correcta'],
+    ['persona','fechaNacimiento_persona','input',21,'cumple formato','format','EDIT','fechaNacimiento_persona_format_ko','Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona','fechaNacimiento_persona','input',22,'es correcto','valid','EDIT',true,'Fecha nacimiento correcta'],
+    ['persona','fechaNacimiento_persona','input',23,'cumple formato','format','SEARCH','fechaNacimiento_persona_format_ko','Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona','fechaNacimiento_persona','input',24,'es correcto','valid','SEARCH',true,'Fecha nacimiento correcta'],
 
     //--------------------direccion_persona--------------------
     ['persona','direccion_persona','input',11,'cumple tamaño minimo','min_size','ADD','direccion_persona_min_size_ko','Tamaño muy corto. Debe estar entre 10 y 200 caracteres'],

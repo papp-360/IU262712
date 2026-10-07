@@ -114,10 +114,7 @@ class persona extends Validations {
       return "nombre_persona_min_size_ko";
     }
     if (!this.max_size("nombre_persona", 45)) {
-      this.dom.mostrar_error_campo(
-        "nombre_persona",
-        "nombre_persona_max_size_ko",
-      );
+      this.dom.mostrar_error_campo("nombre_persona","nombre_persona_max_size_ko");
       return "nombre_persona_max_size_ko";
     }
     // Acepta alfabético con ñ, acentos, puntos,  guiones y espacio
