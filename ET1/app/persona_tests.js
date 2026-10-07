@@ -39,23 +39,27 @@ let persona_def_tests = Array(
 
     //--------------------fechaNacimiento_persona--------------------
     ['persona','fechaNacimiento_persona','input',19,'cumple formato','format','ADD','fechaNacimiento_persona_format_ko','Formato inválido. Debe seguir el formato dd/mm/aaaa'],
-    ['persona','fechaNacimiento_persona','input',20,'fecha posible','personalized','ADD','fechaNacimiento_persona_fecha_valida_ko','Fecha nacimiento correcta'],
-    []
-    ['persona','fechaNacimiento_persona','input',20,'es correcto','valid','ADD',true,'Fecha nacimiento correcta'],
-    ['persona','fechaNacimiento_persona','input',21,'cumple formato','format','EDIT','fechaNacimiento_persona_format_ko','Formato inválido. Debe seguir el formato dd/mm/aaaa'],
-    ['persona','fechaNacimiento_persona','input',22,'es correcto','valid','EDIT',true,'Fecha nacimiento correcta'],
-    ['persona','fechaNacimiento_persona','input',23,'cumple formato','format','SEARCH','fechaNacimiento_persona_format_ko','Formato inválido. Debe seguir el formato dd/mm/aaaa'],
-    ['persona','fechaNacimiento_persona','input',24,'es correcto','valid','SEARCH',true,'Fecha nacimiento correcta'],
+    ['persona','fechaNacimiento_persona','input',20,'fecha posible','personalized','ADD','fechaNacimiento_persona_fecha_valida_ko','La fecha de nacimiento debe ser una fecha válida'],
+    ['persona','fechaNacimiento_persona','input',21,'fecha anterior a la actual','personalized','ADD','fechaNacimiento_persona_fecha_anterior_actual_ko','La fecha de nacimiento debe ser anterior a la fecha actual'],
+    ['persona','fechaNacimiento_persona','input',22,'es correcto','valid','ADD',true,'Fecha nacimiento correcta'],
+    ['persona','fechaNacimiento_persona','input',23,'cumple formato','format','EDIT','fechaNacimiento_persona_format_ko','Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona','fechaNacimiento_persona','input',24,'fecha posible','personalized','EDIT','fechaNacimiento_persona_fecha_valida_ko','La fecha de nacimiento debe ser una fecha válida'],
+    ['persona','fechaNacimiento_persona','input',25,'fecha anterior a la actual','personalized','EDIT','fechaNacimiento_persona_fecha_anterior_actual_ko','La fecha de nacimiento debe ser anterior a la fecha actual'],
+    ['persona','fechaNacimiento_persona','input',26,'es correcto','valid','EDIT',true,'Fecha nacimiento correcta'],
+    ['persona','fechaNacimiento_persona','input',27,'cumple formato','format','SEARCH','fechaNacimiento_persona_format_ko','Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona','fechaNacimiento_persona','input',28,'fecha posible','personalized','SEARCH','fechaNacimiento_persona_fecha_valida_ko','La fecha de nacimiento debe ser una fecha válida'],
+    ['persona','fechaNacimiento_persona','input',29,'fecha anterior a la actual','personalized','SEARCH','fechaNacimiento_persona_fecha_anterior_actual_ko','La fecha de nacimiento debe ser anterior a la fecha actual'],
+    ['persona','fechaNacimiento_persona','input',30,'es correcto','valid','SEARCH',true,'Fecha nacimiento correcta'],
 
     //--------------------direccion_persona--------------------
-    ['persona','direccion_persona','input',11,'cumple tamaño minimo','min_size','ADD','direccion_persona_min_size_ko','Tamaño muy corto. Debe estar entre 10 y 200 caracteres'],
-    ['persona','direccion_persona','input',12,'cumple tamaño maximo','max_size','ADD','direccion_persona_max_size_ko','Tamaño muy grande. Debe estar entre 10 y 200 caracteres'],
-    ['persona','direccion_persona','input',17,'cumple formato','format','ADD','direccion_persona_format_ko','Formato inválido. Debe estar entre 10 y 200 caracteres alfabéticos con  acentos, puntos, guiones, punto y coma, espacio y /'],
-    ['persona','direccion_persona','input',14,'es correcto','valid','ADD',true,'Direccion correcta'],
-    ['persona','direccion_persona','input',11,'cumple tamaño minimo','min_size','EDIT','direccion_persona_min_size_ko','Tamaño muy corto. Debe estar entre 10 y 200 caracteres'],
-    ['persona','direccion_persona','input',12,'cumple tamaño maximo','max_size','EDIT','direccion_persona_max_size_ko','Tamaño muy grande. Debe estar entre 10 y 200 caracteres'],
-    ['persona','direccion_persona','input',17,'cumple formato','format','EDIT','direccion_persona_format_ko','Formato inválido. Debe estar entre 10 y 200 caracteres alfabéticos con  acentos, puntos, guiones, punto y coma, espacio y /'],
-    ['persona','direccion_persona','input',14,'es correcto','valid','EDIT',true,'Direccion correcta'],
+    ['persona','direccion_persona','input',31,'cumple tamaño minimo','min_size','ADD','direccion_persona_min_size_ko','Tamaño muy corto. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',32,'cumple tamaño maximo','max_size','ADD','direccion_persona_max_size_ko','Tamaño muy grande. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',33,'cumple formato','format','ADD','direccion_persona_format_ko','Formato inválido. Debe estar entre 10 y 200 caracteres alfabéticos con  acentos, puntos, guiones, punto y coma, espacio y /'],
+    ['persona','direccion_persona','input',34,'es correcto','valid','ADD',true,'Direccion correcta'],
+    ['persona','direccion_persona','input',35,'cumple tamaño minimo','min_size','EDIT','direccion_persona_min_size_ko','Tamaño muy corto. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',36,'cumple tamaño maximo','max_size','EDIT','direccion_persona_max_size_ko','Tamaño muy grande. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',37,'cumple formato','format','EDIT','direccion_persona_format_ko','Formato inválido. Debe estar entre 10 y 200 caracteres alfabéticos con  acentos, puntos, guiones, punto y coma, espacio y /'],
+    ['persona','direccion_persona','input',38,'es correcto','valid','EDIT',true,'Direccion correcta'],
 
 
     //--------------------telefono_persona--------------------
@@ -63,6 +67,8 @@ let persona_def_tests = Array(
     ['persona','telefono_persona','input',14,'es correcto','valid','ADD',true,'Teléfono correcto'],
     ['persona','telefono_persona','input',17,'cumple formato','format','EDIT','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
     ['persona','telefono_persona','input',14,'es correcto','valid','EDIT',true,'Teléfono correcto'],
+    ['persona','telefono_persona','input',17,'cumple formato','format','SEARCH','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
+    ['persona','telefono_persona','input',14,'es correcto','valid','SEARCH',true,'Teléfono correcto'],
 
     
     //--------------------email_persona--------------------
@@ -70,9 +76,9 @@ let persona_def_tests = Array(
     ['persona','email_persona','input',14,'es correcto','valid','ADD',true,'Email correcto'],
     ['persona','email_persona','input',17,'cumple formato','format','EDIT','email_persona_format_ko','Formato inválido. Debe seguir nombredeusuario@dominio.com'],
     ['persona','email_persona','input',14,'es correcto','valid','EDIT',true,'Email correcto'],
+    
 
     //---------------------nuevo foto persona--------------------
-   
     ['persona', 'nuevo_foto_persona', 16, 'Comprobar formato nombre', 'ADD', 'nuevo_foto_persona_format_name_file_KO', 'El formato del nombre es incorrecto. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
     ['persona', 'nuevo_foto_persona', 17, 'Comprobar formato fichero', 'ADD', 'nuevo_foto_persona_type_file_KO', 'El formato del archivo es demasiado grande. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
     ['persona', 'nuevo_foto_persona', 18, 'Comprobar tamaño fichero', 'ADD', 'nuevo_foto_persona_max_size_file_KO', 'El tamaño del archivo fotoacto es demasiado grande. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
