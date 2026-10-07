@@ -60,23 +60,29 @@ let persona_def_tests = Array(
     ['persona','direccion_persona','input',36,'cumple tamaño maximo','max_size','EDIT','direccion_persona_max_size_ko','Tamaño muy grande. Debe estar entre 10 y 200 caracteres'],
     ['persona','direccion_persona','input',37,'cumple formato','format','EDIT','direccion_persona_format_ko','Formato inválido. Debe estar entre 10 y 200 caracteres alfabéticos con  acentos, puntos, guiones, punto y coma, espacio y /'],
     ['persona','direccion_persona','input',38,'es correcto','valid','EDIT',true,'Direccion correcta'],
+    ['persona','direccion_persona','input',39,'cumple tamaño minimo','min_size','SEARCH','direccion_persona_min_size_ko','Tamaño muy corto. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',40,'cumple tamaño maximo','max_size','SEARCH','direccion_persona_max_size_ko','Tamaño muy grande. Debe estar entre 10 y 200 caracteres'],
+    ['persona','direccion_persona','input',41,'cumple formato','format','SEARCH','direccion_persona_format_ko','Formato inválido. Debe estar entre 10 y 200 caracteres alfabéticos con  acentos, puntos, guiones, punto y coma, espacio y /'],
+    ['persona','direccion_persona','input',42,'es correcto','valid','SEARCH',true,'Direccion correcta'],
 
 
     //--------------------telefono_persona--------------------
-    ['persona','telefono_persona','input',17,'cumple formato','format','ADD','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
-    ['persona','telefono_persona','input',14,'es correcto','valid','ADD',true,'Teléfono correcto'],
-    ['persona','telefono_persona','input',17,'cumple formato','format','EDIT','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
-    ['persona','telefono_persona','input',14,'es correcto','valid','EDIT',true,'Teléfono correcto'],
-    ['persona','telefono_persona','input',17,'cumple formato','format','SEARCH','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
-    ['persona','telefono_persona','input',14,'es correcto','valid','SEARCH',true,'Teléfono correcto'],
+    ['persona','telefono_persona','input',43,'cumple formato','format','ADD','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
+    ['persona','telefono_persona','input',44,'es correcto','valid','ADD',true,'Teléfono correcto'],
+    ['persona','telefono_persona','input',45,'cumple formato','format','EDIT','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
+    ['persona','telefono_persona','input',44,'es correcto','valid','EDIT',true,'Teléfono correcto'],
+    ['persona','telefono_persona','input',45,'cumple formato','format','SEARCH','telefono_persona_format_ko','Formato inválido. Deben ser 9 números'],
+    ['persona','telefono_persona','input',44,'es correcto','valid','SEARCH',true,'Teléfono correcto'],
 
-    
+
     //--------------------email_persona--------------------
-    ['persona','email_persona','input',17,'cumple formato','format','ADD','email_persona_format_ko','Formato inválido. Debe seguir nombredeusuario@dominio.com'],
-    ['persona','email_persona','input',14,'es correcto','valid','ADD',true,'Email correcto'],
-    ['persona','email_persona','input',17,'cumple formato','format','EDIT','email_persona_format_ko','Formato inválido. Debe seguir nombredeusuario@dominio.com'],
-    ['persona','email_persona','input',14,'es correcto','valid','EDIT',true,'Email correcto'],
-    
+    ['persona','email_persona','input',46,'cumple formato','format','ADD','email_persona_format_ko','Formato inválido. Debe seguir nombredeusuario@dominio.com'],
+    ['persona','email_persona','input',47,'es correcto','valid','ADD',true,'Email correcto'],
+    ['persona','email_persona','input',46,'cumple formato','format','EDIT','email_persona_format_ko','Formato inválido. Debe seguir nombredeusuario@dominio.com'],
+    ['persona','email_persona','input',47,'es correcto','valid','EDIT',true,'Email correcto'],
+    ['persona','email_persona','input',46,'cumple formato','format','SEARCH','email_persona_format_ko','Formato inválido. Debe seguir nombredeusuario@dominio.com'],
+    ['persona','email_persona','input',47,'es correcto','valid','SEARCH',true,'Email correcto'],
+
 
     //---------------------nuevo foto persona--------------------
     ['persona', 'nuevo_foto_persona', 16, 'Comprobar formato nombre', 'ADD', 'nuevo_foto_persona_format_name_file_KO', 'El formato del nombre es incorrecto. Debe ser una imagen con alfabéticos (sin acentos ni ñ ni espacios) y “.”. Min3 Max 15. Solo jpg o jpeg y tamaño de fichero menor de 2.000.000 bytes'],
