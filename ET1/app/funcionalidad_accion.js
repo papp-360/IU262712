@@ -1,3 +1,4 @@
+
 let funcionalidad_accion_def_tests = Array(
     ['funcionalidad','id_funcionalidad','select',1,'cumple tamaño mínimo','min_size','ADD','id_funcionalidad_min_size_ko','Tamaño muy corto. El identificador de funcionalidad debe tener entre 1 y 11 dígitos'],
     ['funcionalidad','id_funcionalidad','select',2,'cumple tamaño máximo','max_size','ADD','id_funcionalidad_max_size_ko','Tamaño muy grande. El identificador de funcionalidad debe tener entre 1 y 11 dígitos'],
