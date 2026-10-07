@@ -68,7 +68,36 @@ let funcionalidad_pruebas = Array(
     ['funcionalidad','nombre_funcionalidad','input',13,17,'ADD',{nombre_funcionalidad:'abcd1'},'nombre_funcionalidad_format_ko'],
     ['funcionalidad','nombre_funcionalidad','input',13,18,'ADD',{nombre_funcionalidad:'abcd#'},'nombre_funcionalidad_format_ko'],
     ['funcionalidad','nombre_funcionalidad','input',14,19,'ADD',{nombre_funcionalidad:'abcdñ'},true],
+    
+    ['funcionalidad','nombre_funcionalidad','input',15,20,'EDIT',{nombre_funcionalidad:'abcd'},'nombre_funcionalidad_min_size_ko'],
+    ['funcionalidad','nombre_funcionalidad','input',16,21,'EDIT',{nombre_funcionalidad:'a'.repeat(49)},'nombre_funcionalidad_max_size_ko'],
+    ['funcionalidad','nombre_funcionalidad','input',17,22,'EDIT',{nombre_funcionalidad:'abcd1'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad','input',17,23,'EDIT',{nombre_funcionalidad:'abcd#'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad','input',18,24,'EDIT',{nombre_funcionalidad:'abcdñ'},true],
 
+    ['funcionalidad','nombre_funcionalidad','input',19,25,'SEARCH',{nombre_funcionalidad:'a'.repeat(49)},'nombre_funcionalidad_max_size_ko'],
+    ['funcionalidad','nombre_funcionalidad','input',20,26,'SEARCH',{nombre_funcionalidad:'abcd1'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad','input',20,27,'SEARCH',{nombre_funcionalidad:'abcd#'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad','input',21,28,'SEARCH',{nombre_funcionalidad:'abcdñ'},true],
+
+    ['funcionalidad','descrip_funcionalidad','input',22,29,'ADD',{descrip_funcionalidad:'abcd'},'descrip_funcionalidad_min_size_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',23,30,'ADD',{descrip_funcionalidad:'a'.repeat(201)},'descrip_funcionalidad_max_size_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',24,31,'ADD',{descrip_funcionalidad:'abcd1'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',24,32,'ADD',{descrip_funcionalidad:'abcd#'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',25,33,'ADD',{descrip_funcionalidad:'abcdñ'},true],
+
+    ['funcionalidad','descrip_funcionalidad','input',26,34,'EDIT',{descrip_funcionalidad:'abcd'},'descrip_funcionalidad_min_size_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',27,35,'EDIT',{descrip_funcionalidad:'a'.repeat(201)},'descrip_funcionalidad_max_size_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',28,36,'EDIT',{descrip_funcionalidad:'abcd1'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',28,37,'EDIT',{descrip_funcionalidad:'abcd#'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',29,38,'EDIT',{descrip_funcionalidad:'abcdñ'},true],
+
+    ['funcionalidad','descrip_funcionalidad','input',30,39,'SEARCH',{descrip_funcionalidad:'a'.repeat(201)},'descrip_funcionalidad_max_size_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',31,40,'SEARCH',{descrip_funcionalidad:'abcd1'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',31,41,'SEARCH',{descrip_funcionalidad:'abcd#'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad','input',32,42,'SEARCH',{descrip_funcionalidad:'abcdñ'},true]
+
+    
 
 
 
