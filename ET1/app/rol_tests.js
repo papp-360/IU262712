@@ -2,7 +2,7 @@
 // Definicion de tests: rol_def_tests
 // ===============================================================
 var rol_def_tests = [
-  
+
   // ATRIBUTO: id_rol (numerico min 1 max 11 digitos)
   // === id_rol ADD ===
   ["rol", "id_rol", "input", 1, "Validar format numerico id_rol en ADD", "ADD", "id_rol_format_KO", "El identificador de rol debe ser numerico"],
@@ -17,7 +17,7 @@ var rol_def_tests = [
   // === id_rol SEARCH ===
   ["rol", "id_rol", "input", 7, "Validar format numerico id_rol en SEARCH", "SEARCH", "id_rol_format_KO", "El identificador de rol no es valido en SEARCH"],
   ["rol", "id_rol", "input", 8, "Validar id_rol correcto en SEARCH", "SEARCH", true, "Busqueda por identificador de rol correcta"],
-  
+
   // ATRIBUTO: rol_name (alfabetico sin n, min 5 max 48)
   // === rol_name ADD ===
   ["rol", "rol_name", "input", 9, "Validar min size rol_name en ADD (min 5)", "ADD", "rol_name_min_size_KO", "El nombre de rol es demasiado corto (minimo 5)"],
@@ -61,89 +61,89 @@ var rol_pruebas = [
 
   // --- ID_ROL ADD ---
   //Test1-8: id_rol ADD
-  ["rol", "id_rol", 1, 1, "ADD", {"id_rol": "abc"}, "id_rol_format_KO"],
-  ["rol", "id_rol", 1, 2, "ADD", {"id_rol": "12a"}, "id_rol_format_KO"],
-  ["rol", "id_rol", 1, 3, "ADD", {"id_rol": "1"}, true],
-  ["rol", "id_rol", 2, 4, "ADD", {"id_rol": "123456789012"}, "id_rol_max_size_KO"],
-  ["rol", "id_rol", 2, 5, "ADD", {"id_rol": "12345678901"}, true],  
-  ["rol", "id_rol", 2, 6, "ADD", {"id_rol": "1"}, true],
-  ["rol", "id_rol", 3, 7, "ADD", {"id_rol": "5"}, true],
-  ["rol", "id_rol", 3, 8, "ADD", {"id_rol": ""}, "id_rol_format_KO"],
+  ["rol", "id_rol", 1, 1, "ADD", { "id_rol": "abc" }, "id_rol_format_KO"],
+  ["rol", "id_rol", 1, 2, "ADD", { "id_rol": "12a" }, "id_rol_format_KO"],
+  ["rol", "id_rol", 1, 3, "ADD", { "id_rol": "1" }, true],
+  ["rol", "id_rol", 2, 4, "ADD", { "id_rol": "123456789012" }, "id_rol_max_size_KO"],
+  ["rol", "id_rol", 2, 5, "ADD", { "id_rol": "12345678901" }, true],
+  ["rol", "id_rol", 2, 6, "ADD", { "id_rol": "1" }, true],
+  ["rol", "id_rol", 3, 7, "ADD", { "id_rol": "5" }, true],
+  ["rol", "id_rol", 3, 8, "ADD", { "id_rol": "" }, "id_rol_format_KO"],
 
   // --- ID_ROL EDIT ---
   //Test9-13: id_rol EDIT
-  ["rol", "id_rol", 4, 9, "EDIT", {"id_rol": "invalido"}, "id_rol_format_KO"],
-  ["rol", "id_rol", 4, 10, "EDIT", {"id_rol": "2"}, true],
-  ["rol", "id_rol", 5, 11, "EDIT", {"id_rol": "123456789012"}, "id_rol_max_size_KO"],
-  ["rol", "id_rol", 5, 12, "EDIT", {"id_rol": "12345678901"}, true],
-  ["rol", "id_rol", 6, 13, "EDIT", {"id_rol": "3"}, true],
+  ["rol", "id_rol", 4, 9, "EDIT", { "id_rol": "invalido" }, "id_rol_format_KO"],
+  ["rol", "id_rol", 4, 10, "EDIT", { "id_rol": "2" }, true],
+  ["rol", "id_rol", 5, 11, "EDIT", { "id_rol": "123456789012" }, "id_rol_max_size_KO"],
+  ["rol", "id_rol", 5, 12, "EDIT", { "id_rol": "12345678901" }, true],
+  ["rol", "id_rol", 6, 13, "EDIT", { "id_rol": "3" }, true],
 
   // --- ID_ROL SEARCH ---
   //Test14-17: id_rol SEARCH
-  ["rol", "id_rol", 7, 14, "SEARCH", {"id_rol": "error"}, "id_rol_format_KO"],
-  ["rol", "id_rol", 7, 15, "SEARCH", {"id_rol": "1"}, true],
-  ["rol", "id_rol", 8, 16, "SEARCH", {"id_rol": ""}, true],
-  ["rol", "id_rol", 8, 17, "SEARCH", {"id_rol": "4"}, true],
+  ["rol", "id_rol", 7, 14, "SEARCH", { "id_rol": "error" }, "id_rol_format_KO"],
+  ["rol", "id_rol", 7, 15, "SEARCH", { "id_rol": "1" }, true],
+  ["rol", "id_rol", 8, 16, "SEARCH", { "id_rol": "" }, true],
+  ["rol", "id_rol", 8, 17, "SEARCH", { "id_rol": "4" }, true],
 
   // --- ROL_NAME ADD ---
   //Test18-26: rol_name ADD
-  ["rol", "rol_name", 9, 18, "ADD", {"rol_name": "user"}, "rol_name_min_size_KO"],
-  ["rol", "rol_name", 9, 19, "ADD", {"rol_name": "admin"}, true],
-  ["rol", "rol_name", 10, 20, "ADD", {"rol_name": "a".repeat(49)}, "rol_name_max_size_KO"], 
-  ["rol", "rol_name", 10, 21, "ADD", {"rol_name": "a".repeat(48)}, true],
-  ["rol", "rol_name", 11, 22, "ADD", {"rol_name": "rol_con_ñ"}, "rol_name_format_KO"],
-  ["rol", "rol_name", 11, 23, "ADD", {"rol_name": "rol123"}, "rol_name_format_KO"],
-  ["rol", "rol_name", 11, 24, "ADD", {"rol_name": "administrador"}, true],
-  ["rol", "rol_name", 12, 25, "ADD", {"rol_name": "coordinador"}, true],
-  ["rol", "rol_name", 12, 26, "ADD", {"rol_name": ""}, "rol_name_min_size_KO"],
+  ["rol", "rol_name", 9, 18, "ADD", { "rol_name": "user" }, "rol_name_min_size_KO"],
+  ["rol", "rol_name", 9, 19, "ADD", { "rol_name": "admin" }, true],
+  ["rol", "rol_name", 10, 20, "ADD", { "rol_name": "a".repeat(49) }, "rol_name_max_size_KO"],
+  ["rol", "rol_name", 10, 21, "ADD", { "rol_name": "a".repeat(48) }, true],
+  ["rol", "rol_name", 11, 22, "ADD", { "rol_name": "rol_con_ñ" }, "rol_name_format_KO"],
+  ["rol", "rol_name", 11, 23, "ADD", { "rol_name": "rol123" }, "rol_name_format_KO"],
+  ["rol", "rol_name", 11, 24, "ADD", { "rol_name": "administrador" }, true],
+  ["rol", "rol_name", 12, 25, "ADD", { "rol_name": "coordinador" }, true],
+  ["rol", "rol_name", 12, 26, "ADD", { "rol_name": "" }, "rol_name_min_size_KO"],
 
   // --- ROL_NAME EDIT ---
   //Test27-33: rol_name EDIT
-  ["rol", "rol_name", 13, 27, "EDIT", {"rol_name": "abc"}, "rol_name_min_size_KO"],
-  ["rol", "rol_name", 13, 28, "EDIT", {"rol_name": "admin"}, true],
-  ["rol", "rol_name", 14, 29, "EDIT", {"rol_name": "a".repeat(49)}, "rol_name_max_size_KO"],
-  ["rol", "rol_name", 14, 30, "EDIT", {"rol_name": "a".repeat(48)}, true],
-  ["rol", "rol_name", 15, 31, "EDIT", {"rol_name": "rol con espacio"}, "rol_name_format_KO"],
-  ["rol", "rol_name", 15, 32, "EDIT", {"rol_name": "supervisor"}, true],
-  ["rol", "rol_name", 16, 33, "EDIT", {"rol_name": "moderador"}, true],
+  ["rol", "rol_name", 13, 27, "EDIT", { "rol_name": "abc" }, "rol_name_min_size_KO"],
+  ["rol", "rol_name", 13, 28, "EDIT", { "rol_name": "admin" }, true],
+  ["rol", "rol_name", 14, 29, "EDIT", { "rol_name": "a".repeat(49) }, "rol_name_max_size_KO"],
+  ["rol", "rol_name", 14, 30, "EDIT", { "rol_name": "a".repeat(48) }, true],
+  ["rol", "rol_name", 15, 31, "EDIT", { "rol_name": "rol con espacio" }, "rol_name_format_KO"],
+  ["rol", "rol_name", 15, 32, "EDIT", { "rol_name": "supervisor" }, true],
+  ["rol", "rol_name", 16, 33, "EDIT", { "rol_name": "moderador" }, true],
 
   // --- ROL_NAME SEARCH ---
   //Test34-39: rol_name SEARCH
-  ["rol", "rol_name", 17, 34, "SEARCH", {"rol_name": "a".repeat(49)}, "rol_name_max_size_KO"],
-  ["rol", "rol_name", 17, 35, "SEARCH", {"rol_name": "a".repeat(48)}, true],
-  ["rol", "rol_name", 18, 36, "SEARCH", {"rol_name": "rol%erroneo"}, "rol_name_format_KO"],
-  ["rol", "rol_name", 18, 37, "SEARCH", {"rol_name": "adm"}, true],
-  ["rol", "rol_name", 19, 38, "SEARCH", {"rol_name": ""}, true],
-  ["rol", "rol_name", 19, 39, "SEARCH", {"rol_name": "admin"}, true],
+  ["rol", "rol_name", 17, 34, "SEARCH", { "rol_name": "a".repeat(49) }, "rol_name_max_size_KO"],
+  ["rol", "rol_name", 17, 35, "SEARCH", { "rol_name": "a".repeat(48) }, true],
+  ["rol", "rol_name", 18, 36, "SEARCH", { "rol_name": "rol%erroneo" }, "rol_name_format_KO"],
+  ["rol", "rol_name", 18, 37, "SEARCH", { "rol_name": "adm" }, true],
+  ["rol", "rol_name", 19, 38, "SEARCH", { "rol_name": "" }, true],
+  ["rol", "rol_name", 19, 39, "SEARCH", { "rol_name": "admin" }, true],
 
   // --- ROL_DESCRIPTION ADD ---
   //Test40-48: rol description ADD
-  ["rol", "rol_description", 20, 40, "ADD", {"rol_description": "desc"}, "rol_description_min_size_KO"],
-  ["rol", "rol_description", 20, 41, "ADD", {"rol_description": "roles"}, true],
-  ["rol", "rol_description", 21, 42, "ADD", {"rol_description": "d".repeat(201)}, "rol_description_max_size_KO"],
-  ["rol", "rol_description", 21, 43, "ADD", {"rol_description": "d".repeat(200)}, true],
-  ["rol", "rol_description", 22, 44, "ADD", {"rol_description": "rol con numeros 123"}, "rol_description_format_KO"],
-  ["rol", "rol_description", 22, 45, "ADD", {"rol_description": "Permite ano, punto y coma; total."}, true],
-  ["rol", "rol_description", 22, 46, "ADD", {"rol_description": "Descripcion de administrador."}, true],
-  ["rol", "rol_description", 23, 47, "ADD", {"rol_description": "Gestion completa de usuarios."}, true],
-  ["rol", "rol_description", 23, 48, "ADD", {"rol_description": ""}, "rol_description_min_size_KO"],
+  ["rol", "rol_description", 20, 40, "ADD", { "rol_description": "desc" }, "rol_description_min_size_KO"],
+  ["rol", "rol_description", 20, 41, "ADD", { "rol_description": "roles" }, true],
+  ["rol", "rol_description", 21, 42, "ADD", { "rol_description": "d".repeat(201) }, "rol_description_max_size_KO"],
+  ["rol", "rol_description", 21, 43, "ADD", { "rol_description": "d".repeat(200) }, true],
+  ["rol", "rol_description", 22, 44, "ADD", { "rol_description": "rol con numeros 123" }, "rol_description_format_KO"],
+  ["rol", "rol_description", 22, 45, "ADD", { "rol_description": "Permite ano, punto y coma; total." }, true],
+  ["rol", "rol_description", 22, 46, "ADD", { "rol_description": "Descripcion de administrador." }, true],
+  ["rol", "rol_description", 23, 47, "ADD", { "rol_description": "Gestion completa de usuarios." }, true],
+  ["rol", "rol_description", 23, 48, "ADD", { "rol_description": "" }, "rol_description_min_size_KO"],
 
   // --- ROL_DESCRIPTION EDIT ---
   //Test49-55: rol description EDIT
-  ["rol", "rol_description", 24, 49, "EDIT", {"rol_description": "abc"}, "rol_description_min_size_KO"],
-  ["rol", "rol_description", 24, 50, "EDIT", {"rol_description": "roles"}, true],
-  ["rol", "rol_description", 25, 51, "EDIT", {"rol_description": "d".repeat(201)}, "rol_description_max_size_KO"],
-  ["rol", "rol_description", 25, 52, "EDIT", {"rol_description": "d".repeat(200)}, true],
-  ["rol", "rol_description", 26, 53, "EDIT", {"rol_description": "Descripcion con digito 9"}, "rol_description_format_KO"],
-  ["rol", "rol_description", 26, 54, "EDIT", {"rol_description": "Edicion valida con signos, punto."}, true],
-  ["rol", "rol_description", 27, 55, "EDIT", {"rol_description": "Descripcion modificada con exito."}, true],
+  ["rol", "rol_description", 24, 49, "EDIT", { "rol_description": "abc" }, "rol_description_min_size_KO"],
+  ["rol", "rol_description", 24, 50, "EDIT", { "rol_description": "roles" }, true],
+  ["rol", "rol_description", 25, 51, "EDIT", { "rol_description": "d".repeat(201) }, "rol_description_max_size_KO"],
+  ["rol", "rol_description", 25, 52, "EDIT", { "rol_description": "d".repeat(200) }, true],
+  ["rol", "rol_description", 26, 53, "EDIT", { "rol_description": "Descripcion con digito 9" }, "rol_description_format_KO"],
+  ["rol", "rol_description", 26, 54, "EDIT", { "rol_description": "Edicion valida con signos, punto." }, true],
+  ["rol", "rol_description", 27, 55, "EDIT", { "rol_description": "Descripcion modificada con exito." }, true],
 
   // --- ROL_DESCRIPTION SEARCH ---
   //Test56-61: rol description SEARCH
-  ["rol", "rol_description", 28, 56, "SEARCH", {"rol_description": "d".repeat(201)}, "rol_description_max_size_KO"],
-  ["rol", "rol_description", 28, 57, "SEARCH", {"rol_description": "d".repeat(200)}, true],
-  ["rol", "rol_description", 29, 58, "SEARCH", {"rol_description": "desc#invalida"}, "rol_description_format_KO"],
-  ["rol", "rol_description", 29, 59, "SEARCH", {"rol_description": "admin"}, true],
-  ["rol", "rol_description", 30, 60, "SEARCH", {"rol_description": ""}, true],
-  ["rol", "rol_description", 30, 61, "SEARCH", {"rol_description": "descripcion valida"}, true]
+  ["rol", "rol_description", 28, 56, "SEARCH", { "rol_description": "d".repeat(201) }, "rol_description_max_size_KO"],
+  ["rol", "rol_description", 28, 57, "SEARCH", { "rol_description": "d".repeat(200) }, true],
+  ["rol", "rol_description", 29, 58, "SEARCH", { "rol_description": "desc#invalida" }, "rol_description_format_KO"],
+  ["rol", "rol_description", 29, 59, "SEARCH", { "rol_description": "admin" }, true],
+  ["rol", "rol_description", 30, 60, "SEARCH", { "rol_description": "" }, true],
+  ["rol", "rol_description", 30, 61, "SEARCH", { "rol_description": "descripcion valida" }, true]
 ];
