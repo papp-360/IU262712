@@ -2,7 +2,7 @@ let persona_def_tests = Array(
     //campos no ficheros
     //--------------------dni--------------------
     ['persona','dni','input',1,'cumple formato','format','ADD','dni_format_ko','Formato inválido. Debe contener 8 números y una letra al final'],
-    ['persona','dni','input',2,'es correcto','valid','ADD',true,'DNI correcto'],
+    ['persona','dni','input',2,'es correcto','valid','ADD',true,'DNI correcto'], 
 
     //--------------------nombre_persona--------------------
     ['persona','nombre_persona','input',3,'cumple tamaño minimo','min_size','ADD','nombre_persona_min_size_ko','Tamaño muy corto. Debe estar entre 2 y 45 caracteres'],
