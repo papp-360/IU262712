@@ -46,58 +46,58 @@ let funcionalidad_def_tests = Array(
 );
 
 let funcionalidad_pruebas = Array( 
-    ['funcionalidad','id_funcionalidad','input',1,1,'ADD',{id_funcionalidad:''},'id_funcionalidad_min_size_ko'],
-    ['funcionalidad','id_funcionalidad','input',2,2,'ADD',{id_funcionalidad:'1'.repeat(11)},'id_funcionalidad_max_size_ko'],
-    ['funcionalidad','id_funcionalidad','input',3,3,'ADD',{id_funcionalidad:'1234567890a'},'id_funcionalidad_format_ko'],
-    ['funcionalidad','id_funcionalidad','input',3,4,'ADD',{id_funcionalidad:'123456#7890'},'id_funcionalidad_format_ko'],
-    ['funcionalidad','id_funcionalidad','input',4,5,'ADD',{id_funcionalidad:'12345678901'},true],
+    ['funcionalidad','id_funcionalidad',1,1,'ADD',{id_funcionalidad:''},'id_funcionalidad_min_size_ko'],
+    ['funcionalidad','id_funcionalidad',2,2,'ADD',{id_funcionalidad:'1'.repeat(11)},'id_funcionalidad_max_size_ko'],
+    ['funcionalidad','id_funcionalidad',3,3,'ADD',{id_funcionalidad:'1234567890a'},'id_funcionalidad_format_ko'],
+    ['funcionalidad','id_funcionalidad',3,4,'ADD',{id_funcionalidad:'123456#7890'},'id_funcionalidad_format_ko'],
+    ['funcionalidad','id_funcionalidad',4,5,'ADD',{id_funcionalidad:'12345678901'},true],
 
-    ['funcionalidad','id_funcionalidad','input',5,6,'EDIT',{id_funcionalidad:''},'id_funcionalidad_min_size_ko'],
-    ['funcionalidad','id_funcionalidad','input',6,7,'EDIT',{id_funcionalidad:'1'.repeat(11)},'id_funcionalidad_max_size_ko'],
-    ['funcionalidad','id_funcionalidad','input',7,8,'EDIT',{id_funcionalidad:'1234567890a'},'id_funcionalidad_format_ko'],
-    ['funcionalidad','id_funcionalidad','input',7,9,'EDIT',{id_funcionalidad:'123456#7890'},'id_funcionalidad_format_ko'],
-    ['funcionalidad','id_funcionalidad','input',8,10,'EDIT',{id_funcionalidad:'12345678901'},true],
+    ['funcionalidad','id_funcionalidad',5,6,'EDIT',{id_funcionalidad:''},'id_funcionalidad_min_size_ko'],
+    ['funcionalidad','id_funcionalidad',6,7,'EDIT',{id_funcionalidad:'1'.repeat(11)},'id_funcionalidad_max_size_ko'],
+    ['funcionalidad','id_funcionalidad',7,8,'EDIT',{id_funcionalidad:'1234567890a'},'id_funcionalidad_format_ko'],
+    ['funcionalidad','id_funcionalidad',7,9,'EDIT',{id_funcionalidad:'123456#7890'},'id_funcionalidad_format_ko'],
+    ['funcionalidad','id_funcionalidad',8,10,'EDIT',{id_funcionalidad:'12345678901'},true],
 
-    ['funcionalidad','id_funcionalidad','input',9,11,'SEARCH',{id_funcionalidad:'1'.repeat(12)},'id_funcionalidad_max_size_ko'],
-    ['funcionalidad','id_funcionalidad','input',10,12,'SEARCH',{id_funcionalidad:'1234567890a'},'id_funcionalidad_format_ko'],
-    ['funcionalidad','id_funcionalidad','input',10,13,'SEARCH',{id_funcionalidad:'123456#7890'},'id_funcionalidad_format_ko'],
-    ['funcionalidad','id_funcionalidad','input',11,14,'SEARCH',{id_funcionalidad:'12345678901'},true],
+    ['funcionalidad','id_funcionalidad',9,11,'SEARCH',{id_funcionalidad:'1'.repeat(12)},'id_funcionalidad_max_size_ko'],
+    ['funcionalidad','id_funcionalidad',10,12,'SEARCH',{id_funcionalidad:'1234567890a'},'id_funcionalidad_format_ko'],
+    ['funcionalidad','id_funcionalidad',10,13,'SEARCH',{id_funcionalidad:'123456#7890'},'id_funcionalidad_format_ko'],
+    ['funcionalidad','id_funcionalidad',11,14,'SEARCH',{id_funcionalidad:'12345678901'},true],
 
-    ['funcionalidad','nombre_funcionalidad','input',11,15,'ADD',{nombre_funcionalidad:'abcd'},'nombre_funcionalidad_min_size_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',12,16,'ADD',{nombre_funcionalidad:'a'.repeat(49)},'nombre_funcionalidad_max_size_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',13,17,'ADD',{nombre_funcionalidad:'abcd1'},'nombre_funcionalidad_format_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',13,18,'ADD',{nombre_funcionalidad:'abcd#'},'nombre_funcionalidad_format_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',14,19,'ADD',{nombre_funcionalidad:'abcdñ'},true],
+    ['funcionalidad','nombre_funcionalidad',11,15,'ADD',{nombre_funcionalidad:'abcd'},'nombre_funcionalidad_min_size_ko'],
+    ['funcionalidad','nombre_funcionalidad',12,16,'ADD',{nombre_funcionalidad:'a'.repeat(49)},'nombre_funcionalidad_max_size_ko'],
+    ['funcionalidad','nombre_funcionalidad',13,17,'ADD',{nombre_funcionalidad:'abcd1'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad',13,18,'ADD',{nombre_funcionalidad:'abcd#'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad',14,19,'ADD',{nombre_funcionalidad:'abcdñ'},true],
     
-    ['funcionalidad','nombre_funcionalidad','input',15,20,'EDIT',{nombre_funcionalidad:'abcd'},'nombre_funcionalidad_min_size_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',16,21,'EDIT',{nombre_funcionalidad:'a'.repeat(49)},'nombre_funcionalidad_max_size_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',17,22,'EDIT',{nombre_funcionalidad:'abcd1'},'nombre_funcionalidad_format_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',17,23,'EDIT',{nombre_funcionalidad:'abcd#'},'nombre_funcionalidad_format_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',18,24,'EDIT',{nombre_funcionalidad:'abcdñ'},true],
+    ['funcionalidad','nombre_funcionalidad',15,20,'EDIT',{nombre_funcionalidad:'abcd'},'nombre_funcionalidad_min_size_ko'],
+    ['funcionalidad','nombre_funcionalidad',16,21,'EDIT',{nombre_funcionalidad:'a'.repeat(49)},'nombre_funcionalidad_max_size_ko'],
+    ['funcionalidad','nombre_funcionalidad',17,22,'EDIT',{nombre_funcionalidad:'abcd1'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad',17,23,'EDIT',{nombre_funcionalidad:'abcd#'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad',18,24,'EDIT',{nombre_funcionalidad:'abcdñ'},true],
 
-    ['funcionalidad','nombre_funcionalidad','input',19,25,'SEARCH',{nombre_funcionalidad:'a'.repeat(49)},'nombre_funcionalidad_max_size_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',20,26,'SEARCH',{nombre_funcionalidad:'abcd1'},'nombre_funcionalidad_format_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',20,27,'SEARCH',{nombre_funcionalidad:'abcd#'},'nombre_funcionalidad_format_ko'],
-    ['funcionalidad','nombre_funcionalidad','input',21,28,'SEARCH',{nombre_funcionalidad:'abcdñ'},true],
+    ['funcionalidad','nombre_funcionalidad',19,25,'SEARCH',{nombre_funcionalidad:'a'.repeat(49)},'nombre_funcionalidad_max_size_ko'],
+    ['funcionalidad','nombre_funcionalidad',20,26,'SEARCH',{nombre_funcionalidad:'abcd1'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad',20,27,'SEARCH',{nombre_funcionalidad:'abcd#'},'nombre_funcionalidad_format_ko'],
+    ['funcionalidad','nombre_funcionalidad',21,28,'SEARCH',{nombre_funcionalidad:'abcdñ'},true],
 
-    ['funcionalidad','descrip_funcionalidad','input',22,29,'ADD',{descrip_funcionalidad:'abcd'},'descrip_funcionalidad_min_size_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',23,30,'ADD',{descrip_funcionalidad:'a'.repeat(201)},'descrip_funcionalidad_max_size_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',24,31,'ADD',{descrip_funcionalidad:'abcd1'},'descrip_funcionalidad_format_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',24,32,'ADD',{descrip_funcionalidad:'abcd#'},'descrip_funcionalidad_format_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',25,33,'ADD',{descrip_funcionalidad:'abcdñ'},true],
+    ['funcionalidad','descrip_funcionalidad',22,29,'ADD',{descrip_funcionalidad:'abcd'},'descrip_funcionalidad_min_size_ko'],
+    ['funcionalidad','descrip_funcionalidad',23,30,'ADD',{descrip_funcionalidad:'a'.repeat(201)},'descrip_funcionalidad_max_size_ko'],
+    ['funcionalidad','descrip_funcionalidad',24,31,'ADD',{descrip_funcionalidad:'abcd1'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad',24,32,'ADD',{descrip_funcionalidad:'abcd#'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad',25,33,'ADD',{descrip_funcionalidad:'abcdñ'},true],
 
-    ['funcionalidad','descrip_funcionalidad','input',26,34,'EDIT',{descrip_funcionalidad:'abcd'},'descrip_funcionalidad_min_size_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',27,35,'EDIT',{descrip_funcionalidad:'a'.repeat(201)},'descrip_funcionalidad_max_size_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',28,36,'EDIT',{descrip_funcionalidad:'abcd1'},'descrip_funcionalidad_format_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',28,37,'EDIT',{descrip_funcionalidad:'abcd#'},'descrip_funcionalidad_format_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',29,38,'EDIT',{descrip_funcionalidad:'abcdñ'},true],
+    ['funcionalidad','descrip_funcionalidad',26,34,'EDIT',{descrip_funcionalidad:'abcd'},'descrip_funcionalidad_min_size_ko'],
+    ['funcionalidad','descrip_funcionalidad',27,35,'EDIT',{descrip_funcionalidad:'a'.repeat(201)},'descrip_funcionalidad_max_size_ko'],
+    ['funcionalidad','descrip_funcionalidad',28,36,'EDIT',{descrip_funcionalidad:'abcd1'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad',28,37,'EDIT',{descrip_funcionalidad:'abcd#'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad',29,38,'EDIT',{descrip_funcionalidad:'abcdñ'},true],
 
-    ['funcionalidad','descrip_funcionalidad','input',30,39,'SEARCH',{descrip_funcionalidad:'a'.repeat(201)},'descrip_funcionalidad_max_size_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',31,40,'SEARCH',{descrip_funcionalidad:'abcd1'},'descrip_funcionalidad_format_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',31,41,'SEARCH',{descrip_funcionalidad:'abcd#'},'descrip_funcionalidad_format_ko'],
-    ['funcionalidad','descrip_funcionalidad','input',32,42,'SEARCH',{descrip_funcionalidad:'abcdñ'},true]
+    ['funcionalidad','descrip_funcionalidad',30,39,'SEARCH',{descrip_funcionalidad:'a'.repeat(201)},'descrip_funcionalidad_max_size_ko'],
+    ['funcionalidad','descrip_funcionalidad',31,40,'SEARCH',{descrip_funcionalidad:'abcd1'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad',31,41,'SEARCH',{descrip_funcionalidad:'abcd#'},'descrip_funcionalidad_format_ko'],
+    ['funcionalidad','descrip_funcionalidad',32,42,'SEARCH',{descrip_funcionalidad:'abcdñ'},true]
 
-    
+
 
 
 
