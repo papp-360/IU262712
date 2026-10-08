@@ -72,15 +72,15 @@ class persona extends Validations {
   }
 
   /**********************************************************************************************
-		fields validations for ADD 
-	***********************************************************************************************/
+    fields validations for ADD 
+  ***********************************************************************************************/
 
   /** 
-		
-		@return	{string} Error code of field value (fieldname_validationfunction_ko) or
-		@return {bool} true due the field value is correct
+  	
+    @return	{string} Error code of field value (fieldname_validationfunction_ko) or
+    @return {bool} true due the field value is correct
 
-	*/
+  */
   ADD_dni_validation() {
     //Con la validacion de formato también evitamos errores de tamaño
     if (!this.format("dni", "^[0-9]{8}[A-Z]$")) {
@@ -99,92 +99,113 @@ class persona extends Validations {
   }
 
   /**
-		
-		@param 
-		@return
-			{string} Error code of field value (fieldname_validationfunction_ko) 
-			or
-			{bool} true due the field value is correct
+  	
+    @param 
+    @return
+      {string} Error code of field value (fieldname_validationfunction_ko) 
+      or
+      {bool} true due the field value is correct
 
-	*/
+  */
 
   ADD_nombre_persona_validation() {
     if (!this.min_size("nombre_persona", 2)) {
-      this.dom.mostrar_error_campo("nombre_persona", "nombre_persona_min_size_ko");
+      this.dom.mostrar_error_campo(
+        "nombre_persona",
+        "nombre_persona_min_size_ko",
+      );
       return "nombre_persona_min_size_ko";
     }
     if (!this.max_size("nombre_persona", 45)) {
-      this.dom.mostrar_error_campo("nombre_persona","nombre_persona_max_size_ko");
+      this.dom.mostrar_error_campo(
+        "nombre_persona",
+        "nombre_persona_max_size_ko",
+      );
       return "nombre_persona_max_size_ko";
     }
     // Acepta alfabético con ñ, acentos, puntos,  guiones y espacio
     if (!this.format("nombre_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
-      this.dom.mostrar_error_campo("nombre_persona", "nombre_persona_format_ko");
+      this.dom.mostrar_error_campo(
+        "nombre_persona",
+        "nombre_persona_format_ko",
+      );
       return "nombre_persona_format_ko";
     }
-    
+
     this.dom.mostrar_exito_campo("nombre_persona");
     return true;
-}
+  }
 
   ADD_apellidos_persona_validation() {
     if (!this.min_size("apellidos_persona", 3)) {
-      this.dom.mostrar_error_campo("apellidos_persona", "apellidos_persona_min_size_ko");
+      this.dom.mostrar_error_campo(
+        "apellidos_persona",
+        "apellidos_persona_min_size_ko",
+      );
       return "apellidos_persona_min_size_ko";
     }
     if (!this.max_size("apellidos_persona", 100)) {
-      this.dom.mostrar_error_campo("apellidos_persona", "apellidos_persona_max_size_ko");
+      this.dom.mostrar_error_campo(
+        "apellidos_persona",
+        "apellidos_persona_max_size_ko",
+      );
       return "apellidos_persona_max_size_ko";
     }
     // Acepta alfabético con ñ, acentos, puntos,  guiones y espacio
     if (!this.format("apellidos_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
-      this.dom.mostrar_error_campo("apellidos_persona","apellidos_persona_format_ko");
+      this.dom.mostrar_error_campo(
+        "apellidos_persona",
+        "apellidos_persona_format_ko",
+      );
       return "apellidos_persona_format_ko";
     }
-    
+
     this.dom.mostrar_exito_campo("apellidos_persona");
     return true;
   }
 
-  ADD_fechaNacimiento_persona_validation(){
-    if (!this.format("fechaNacimiento_persona", "^\\d{1,2}\/\\d{1,2}\/\\d{4}$")) {
-      this.dom.mostrar_error_campo("fechaNacimiento_persona", "fechaNacimiento_persona_format_ko");
-      return "fechaNacimiento_persona_format_ko";
+  ADD_fechanacimiento_persona_validation() {
+    if (!this.format("fechanacimiento_persona", "^\\d{1,2}\/\\d{1,2}\/\\d{4}$")) {
+      this.dom.mostrar_error_campo("fechanacimiento_persona", "fechanacimiento_persona_format_ko");
+      return "fechanacimiento_persona_format_ko";
     }
     //Comprobar que la fecha no sea superior a la actual
-    if (!(this.verificar_fechaNacimiento_valida('fechaNacimiento_persona') === true)) {
-      
+    if (!(this.verificar_fechaNacimiento_valida('fechanacimiento_persona') === true)) {
+
     }
 
     //Comprobar que la fecha sea posible
-    if (!this.format("fechaNacimiento_persona", "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(19[2-9][0-9]|20[0-2][0-9])$")) {
-      this.dom.mostrar_error_campo("fechaNacimiento_persona", "fechaNacimiento_persona_fecha_valida_ko");
-      return "fechaNacimiento_persona_fecha_valida_ko";
+    if (!this.format("fechanacimiento_persona", "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(19[2-9][0-9]|20[0-2][0-9])$")) {
+      this.dom.mostrar_error_campo("fechanacimiento_persona", "fechanacimiento_persona_fecha_valida_ko");
+      return "fechanacimiento_persona_fecha_valida_ko";
     }
 
-    this.dom.mostrar_exito_campo("fechaNacimiento_persona");
+    this.dom.mostrar_exito_campo("fechanacimiento_persona");
     return true;
   }
 
-  ADD_direccion_persona_validation(){
-    if (!this.min_size("direccion_persona", 10)) {
-      this.dom.mostrar_error_campo("direccion_persona","direccion_persona_min_size_ko");
+  ADD_direccion_persona_validation() {
+    let elem = document.getElementById("direccion_persona");
+    let valor = elem ? elem.value : "";
+
+    if (valor.length < 10) {
+      this.dom.mostrar_error_campo("direccion_persona", "direccion_persona_min_size_ko");
       return "direccion_persona_min_size_ko";
     }
-     if (!this.max_size("direccion_persona", 200)) {
-      this.dom.mostrar_error_campo("direccion_persona","direccion_persona_max_size_ko");
+    if (valor.length > 200) {
+      this.dom.mostrar_error_campo("direccion_persona", "direccion_persona_max_size_ko");
       return "direccion_persona_max_size_ko";
     }
     if (!this.format("direccion_persona", "^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚüÜ.;, ºª'\n\r/-]+$")) {
       this.dom.mostrar_error_campo("direccion_persona", "direccion_persona_format_ko");
       return "direccion_persona_format_ko";
     }
-    
+
     this.dom.mostrar_exito_campo("direccion_persona");
     return true;
   }
 
-  ADD_telefono_persona_validation(){
+  ADD_telefono_persona_validation() {
     if (!this.format("telefono_persona", "^[6789][0-9]{8}$")) {
       this.dom.mostrar_error_campo("telefono_persona", "telefono_persona_format_ko");
       return "telefono_persona_format_ko";
@@ -192,9 +213,9 @@ class persona extends Validations {
     this.dom.mostrar_exito_campo("telefono_persona");
     return true;
   }
-  
 
-  ADD_email_persona_validation(){
+
+  ADD_email_persona_validation() {
     if (!this.format("email_persona", "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
       this.dom.mostrar_error_campo("email_persona", "email_persona_format_ko");
       return "email_persona_format_ko";
@@ -203,21 +224,38 @@ class persona extends Validations {
     return true;
   }
 
+  ADD_foto_persona_validation() {
+    this.dom.mostrar_exito_campo("foto_persona");
+    return true;
+  }
+
   ADD_nuevo_foto_persona_validation() {
     if (!this.exist_file("nuevo_foto_persona")) {
-      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_empty_file_ko");
+      this.dom.mostrar_error_campo(
+        "nuevo_foto_persona",
+        "nuevo_foto_persona_empty_file_ko",
+      );
       return "nuevo_foto_persona_not_exist_file_ko";
     }
-    if (!this.max_size_file("nuevo_foto_persona", 2000)) {
-      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_max_size_file_ko");
+    if (!this.max_size_file("nuevo_foto_persona", 2000000)) {
+      this.dom.mostrar_error_campo(
+        "nuevo_foto_persona",
+        "nuevo_foto_persona_max_size_file_ko",
+      );
       return "nuevo_foto_persona_max_size_file_ko";
     }
     if (!this.type_file("nuevo_foto_persona", ["image/jpeg"])) {
-      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_type_file_ko");
+      this.dom.mostrar_error_campo(
+        "nuevo_foto_persona",
+        "nuevo_foto_persona_type_file_ko",
+      );
       return "nuevo_foto_persona_type_file_ko";
     }
-    if (!this.format_name_file("nuevo_foto_persona", "^[a-zA-Z]*$")) {
-      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_format_name_file_ko");
+    if (!this.format_name_file("nuevo_foto_persona", "^[a-zA-Z0-9_-]+\\.(jpg|jpeg)$")) {
+      this.dom.mostrar_error_campo(
+        "nuevo_foto_persona",
+        "nuevo_foto_persona_format_name_file_ko",
+      );
       return "nuevo_foto_persona_format_name_file_ko";
     }
     this.dom.mostrar_exito_campo("nuevo_foto_persona");
@@ -226,11 +264,11 @@ class persona extends Validations {
 
 
   /**
-	 
-		@param
-		@return	{bool} true if all fields validations are ok or 
-		@return {object} object with the ids of elements and error code if field validation is not ok and true if field validation is ok
-	*/
+   
+    @param
+    @return	{bool} true if all fields validations are ok or 
+    @return {object} object with the ids of elements and error code if field validation is not ok and true if field validation is ok
+  */
   ADD_submit_persona() {
     // object to store de fields validations
     var set_result = {};
@@ -270,8 +308,8 @@ class persona extends Validations {
 
 
   /**********************************************************************************************
-		fields validations for EDIT
-	***********************************************************************************************/
+    fields validations for EDIT
+  ***********************************************************************************************/
 
   EDIT_dni_validation() {
     return this.ADD_dni_validation();
@@ -285,20 +323,25 @@ class persona extends Validations {
     return this.ADD_apellidos_persona_validation();
   }
 
-  EDIT_fechaNacimiento_persona_validation(){
-    return this.ADD_fechaNacimiento_persona_validation();
+  EDIT_fechanacimiento_persona_validation() {
+    return this.ADD_fechanacimiento_persona_validation();
   }
 
-  EDIT_direccion_persona_validation(){
+  EDIT_direccion_persona_validation() {
     return this.ADD_direccion_persona_validation();
   }
 
-  EDIT_telefono_persona_validation(){
+  EDIT_telefono_persona_validation() {
     return this.ADD_telefono_persona_validation();
   }
 
-  EDIT_email_persona_validation(){
+  EDIT_email_persona_validation() {
     return this.ADD_email_persona_validation();
+  }
+
+  EDIT_foto_persona_validation() {
+    this.dom.mostrar_exito_campo("foto_persona");
+    return true;
   }
 
   EDIT_nuevo_foto_persona_validation() {
@@ -306,17 +349,25 @@ class persona extends Validations {
       this.dom.mostrar_exito_campo("nuevo_foto_persona");
       return true;
     }
-    if (!this.max_size_file("nuevo_foto_persona", 2000)) {
-      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_max_size_file_ko");
+    if (!this.max_size_file("nuevo_foto_persona", 2000000)) {
+      this.dom.mostrar_error_campo(
+        "nuevo_foto_persona",
+        "nuevo_foto_persona_max_size_file_ko",
+      );
       return "nuevo_foto_persona_max_size_file_ko";
     }
     if (!this.type_file("nuevo_foto_persona", ["image/jpeg"])) {
-      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_type_file_ko"
+      this.dom.mostrar_error_campo(
+        "nuevo_foto_persona",
+        "nuevo_foto_persona_type_file_ko",
       );
       return "nuevo_foto_persona_type_file_ko";
     }
     if (!this.format_name_file("nuevo_foto_persona", "[a-zA-Z.]")) {
-      this.dom.mostrar_error_campo("nuevo_foto_persona", "nuevo_foto_persona_format_name_file_ko");
+      this.dom.mostrar_error_campo(
+        "nuevo_foto_persona",
+        "nuevo_foto_persona_format_name_file_ko",
+      );
       return "nuevo_foto_persona_format_name_file_ko";
     }
     this.dom.mostrar_exito_campo("nuevo_foto_persona");
@@ -327,46 +378,46 @@ class persona extends Validations {
 
 
   /**********************************************************************************************
-		fields validations for SEARCH 
-	***********************************************************************************************/
+    fields validations for SEARCH 
+  ***********************************************************************************************/
 
 
 
   /**********************************************************************************************
-		métodos adicionales
-	***********************************************************************************************/
+    métodos adicionales
+  ***********************************************************************************************/
 
   verificar_formato_dni(id_campo) {
 
-    	if (document.getElementById(id_campo).value === '') {
-        	return false;
-    	}
+    if (document.getElementById(id_campo).value === '') {
+      return false;
+    }
 
-    	let dni = document.getElementById(id_campo).value.toUpperCase();
-    	const dni_letters = "TRWAGMYFPDXBNJZSQVHLCKE";
-    	const dni_regex = '^[0-9]{8}[A-Z]$';
+    let dni = document.getElementById(id_campo).value.toUpperCase();
+    const dni_letters = "TRWAGMYFPDXBNJZSQVHLCKE";
+    const dni_regex = '^[0-9]{8}[A-Z]$';
 
-    	let numero, letra, letra_calculada;
+    let numero, letra, letra_calculada;
 
-    	if (this.validations.format(id_campo, dni_regex)) {
-        
-        	numero = dni.substr(0, 8);
-        	letra = dni.charAt(8);
-        	letra_calculada = dni_letters.charAt(numero % 23);
+    if (this.validations.format(id_campo, dni_regex)) {
 
-        	return (letra === letra_calculada); // Devuelve true si coinciden, false si no
-    
-    	}  else {
-        return false; // No cumple el formato de DNI
-    	}
-	}
+      numero = dni.substr(0, 8);
+      letra = dni.charAt(8);
+      letra_calculada = dni_letters.charAt(numero % 23);
 
-  verificar_fechaNacimiento_valida(id_campo){
+      return (letra === letra_calculada); // Devuelve true si coinciden, false si no
+
+    } else {
+      return false; // No cumple el formato de DNI
+    }
+  }
+
+  verificar_fechanacimiento_valida(id_campo) {
     const campo = document.getElementById(id_campo);
     if (!campo || campo.value === '') {
-          return false;
-      }
+      return false;
+    }
 
-      
+
   }
 }
