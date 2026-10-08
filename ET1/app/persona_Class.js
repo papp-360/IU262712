@@ -237,6 +237,16 @@ class persona extends Validations {
       );
       return "nuevo_foto_persona_not_exist_file_ko";
     }
+
+    let file = document.getElementById("nuevo_foto_persona").files[0];
+    if (file.name.length < 5) {
+      this.dom.mostrar_error_campo(
+        "nuevo_foto_persona",
+        "nuevo_foto_persona_min_size_ko",
+      );
+      return "nuevo_foto_persona_min_size_ko";
+    }
+
     if (!this.max_size_file("nuevo_foto_persona", 2000000)) {
       this.dom.mostrar_error_campo(
         "nuevo_foto_persona",
@@ -251,7 +261,7 @@ class persona extends Validations {
       );
       return "nuevo_foto_persona_type_file_ko";
     }
-    if (!this.format_name_file("nuevo_foto_persona", "^[a-zA-Z0-9_-]+\\.(jpg|jpeg)$")) {
+    if (!this.format_name_file("nuevo_foto_persona", "^[a-zA-Z0-9_-]+\\.(jpe?g|JPE?G)$")) {
       this.dom.mostrar_error_campo(
         "nuevo_foto_persona",
         "nuevo_foto_persona_format_name_file_ko",
@@ -345,10 +355,21 @@ class persona extends Validations {
   }
 
   EDIT_nuevo_foto_persona_validation() {
-    if (!this.not_exist_file("nuevo_foto_persona")) {
+    let elem = document.getElementById("nuevo_foto_persona");
+    if (!elem || !elem.files || elem.files.length === 0) {
       this.dom.mostrar_exito_campo("nuevo_foto_persona");
       return true;
     }
+
+    let file = elem.files[0];
+    if (file.name.length < 5) {
+      this.dom.mostrar_error_campo(
+        "nuevo_foto_persona",
+        "nuevo_foto_persona_min_size_ko",
+      );
+      return "nuevo_foto_persona_min_size_ko";
+    }
+
     if (!this.max_size_file("nuevo_foto_persona", 2000000)) {
       this.dom.mostrar_error_campo(
         "nuevo_foto_persona",
@@ -363,7 +384,7 @@ class persona extends Validations {
       );
       return "nuevo_foto_persona_type_file_ko";
     }
-    if (!this.format_name_file("nuevo_foto_persona", "[a-zA-Z.]")) {
+    if (!this.format_name_file("nuevo_foto_persona", "^[a-zA-Z0-9_-]+\\.(jpe?g|JPE?G)$")) {
       this.dom.mostrar_error_campo(
         "nuevo_foto_persona",
         "nuevo_foto_persona_format_name_file_ko",
