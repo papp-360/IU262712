@@ -35,7 +35,7 @@ class persona extends Validations {
 			<br>
 			
 			<label class="label_fechaNacimiento_persona">Fecha de Nacimiento</label>
-			<input type='text' id='fechaNacimiento_persona' name='fechaNacimiento_persona' onblur=" return entidad.ADD_fechaNacimiento_persona_validation();"></input>
+			<input type='text' id='fechanacimiento_persona' name='fechanacimiento_persona' onblur=" return entidad.ADD_fechanacimiento_persona_validation();"></input>
 			<span id="span_error_fechaNacimiento_persona" ><a id="error_fechaNacimiento_persona"></a></span>
 			
 			<br>
@@ -374,13 +374,147 @@ class persona extends Validations {
     return true;
   }
 
+  EDIT_submit_persona() {
+    return this.ADD_submit_persona();
+  }
+
 
 
 
   /**********************************************************************************************
     fields validations for SEARCH 
   ***********************************************************************************************/
+  SEARCH_submit_persona() {
+    return true;
+  }
 
+  SEARCH_dni_validation() {
+    let elem = document.getElementById("dni");
+    let valor = elem ? elem.value : "";
+    if (valor === "") {
+      this.dom.mostrar_exito_campo("dni");
+      return true;
+    }
+    if (!this.format("dni", "^[0-9]{8}[A-Z]$")) {
+      this.dom.mostrar_error_campo("dni", "dni_format_ko");
+      return "dni_format_ko";
+    }
+    this.dom.mostrar_exito_campo("dni");
+    return true;
+  }
+
+  SEARCH_nombre_persona_validation() {
+    let elem = document.getElementById("nombre_persona");
+    let valor = elem ? elem.value : "";
+    if (valor === "") {
+      this.dom.mostrar_exito_campo("nombre_persona");
+      return true;
+    }
+    if (valor.length > 45) {
+      this.dom.mostrar_error_campo("nombre_persona", "nombre_persona_max_size_ko");
+      return "nombre_persona_max_size_ko";
+    }
+    if (!this.format("nombre_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
+      this.dom.mostrar_error_campo("nombre_persona", "nombre_persona_format_ko");
+      return "nombre_persona_format_ko";
+    }
+    this.dom.mostrar_exito_campo("nombre_persona");
+    return true;
+  }
+
+  SEARCH_apellidos_persona_validation() {
+    let elem = document.getElementById("apellidos_persona");
+    let valor = elem ? elem.value : "";
+    if (valor === "") {
+      this.dom.mostrar_exito_campo("apellidos_persona");
+      return true;
+    }
+    if (valor.length > 100) {
+      this.dom.mostrar_error_campo("apellidos_persona", "apellidos_persona_max_size_ko");
+      return "apellidos_persona_max_size_ko";
+    }
+    if (!this.format("apellidos_persona", "^[a-zA-ZñÑáéíóúÁÉÍÓÚ. -]+$")) {
+      this.dom.mostrar_error_campo("apellidos_persona", "apellidos_persona_format_ko");
+      return "apellidos_persona_format_ko";
+    }
+    this.dom.mostrar_exito_campo("apellidos_persona");
+    return true;
+  }
+
+  SEARCH_fechanacimiento_persona_validation() {
+    let elem = document.getElementById("fechanacimiento_persona") || document.getElementById("fechaNacimiento_persona");
+    let id = elem ? elem.id : "fechanacimiento_persona";
+    let valor = elem ? elem.value : "";
+    if (valor === "") {
+      this.dom.mostrar_exito_campo(id);
+      return true;
+    }
+    if (!this.format(id, "^\\d{1,2}\/\\d{1,2}\/\\d{4}$")) {
+      this.dom.mostrar_error_campo(id, "fechanacimiento_persona_format_ko");
+      return "fechanacimiento_persona_format_ko";
+    }
+    this.dom.mostrar_exito_campo(id);
+    return true;
+  }
+
+  SEARCH_direccion_persona_validation() {
+    let elem = document.getElementById("direccion_persona");
+    let valor = elem ? elem.value : "";
+    if (valor === "") {
+      this.dom.mostrar_exito_campo("direccion_persona");
+      return true;
+    }
+    if (valor.length > 200) {
+      this.dom.mostrar_error_campo("direccion_persona", "direccion_persona_max_size_ko");
+      return "direccion_persona_max_size_ko";
+    }
+    if (!this.format("direccion_persona", "^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚüÜ.;, ºª'\n\r/-]+$")) {
+      this.dom.mostrar_error_campo("direccion_persona", "direccion_persona_format_ko");
+      return "direccion_persona_format_ko";
+    }
+    this.dom.mostrar_exito_campo("direccion_persona");
+    return true;
+  }
+
+  SEARCH_telefono_persona_validation() {
+    let elem = document.getElementById("telefono_persona");
+    let valor = elem ? elem.value : "";
+    if (valor === "") {
+      this.dom.mostrar_exito_campo("telefono_persona");
+      return true;
+    }
+    if (!this.format("telefono_persona", "^[6789][0-9]{8}$")) {
+      this.dom.mostrar_error_campo("telefono_persona", "telefono_persona_format_ko");
+      return "telefono_persona_format_ko";
+    }
+    this.dom.mostrar_exito_campo("telefono_persona");
+    return true;
+  }
+
+  SEARCH_email_persona_validation() {
+    let elem = document.getElementById("email_persona");
+    let valor = elem ? elem.value : "";
+    if (valor === "") {
+      this.dom.mostrar_exito_campo("email_persona");
+      return true;
+    }
+    if (!this.format("email_persona", "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
+      this.dom.mostrar_error_campo("email_persona", "email_persona_format_ko");
+      return "email_persona_format_ko";
+    }
+    this.dom.mostrar_exito_campo("email_persona");
+    return true;
+  }
+
+  SEARCH_foto_persona_validation() {
+    this.dom.mostrar_exito_campo("foto_persona");
+    return true;
+  }
+
+  SEARCH_nuevo_foto_persona_validation() {
+    this.dom.mostrar_exito_campo("nuevo_foto_persona");
+    return true;
+  }
 
 
   /**********************************************************************************************
