@@ -225,6 +225,22 @@ class persona extends Validations {
   }
 
   ADD_foto_persona_validation() {
+    let elem = document.getElementById("foto_persona");
+    let valor = elem ? elem.value : "";
+
+    if (valor.length < 5) {
+      this.dom.mostrar_error_campo("foto_persona", "foto_persona_min_size_KO");
+      return "foto_persona_min_size_KO";
+    }
+    if (valor.length > 20) {
+      this.dom.mostrar_error_campo("foto_persona", "foto_persona_max_size_KO");
+      return "foto_persona_max_size_KO";
+    }
+    if (!this.format("foto_persona", "^[a-zA-Z0-9_-]+\\.(jpe?g|JPE?G)$")) {
+      this.dom.mostrar_error_campo("foto_persona", "foto_persona_format_name_file_KO");
+      return "foto_persona_format_name_file_KO";
+    }
+
     this.dom.mostrar_exito_campo("foto_persona");
     return true;
   }
@@ -350,6 +366,24 @@ class persona extends Validations {
   }
 
   EDIT_foto_persona_validation() {
+    let elem = document.getElementById("foto_persona");
+    let valor = elem ? elem.value : "";
+
+    if (valor !== "") {
+      if (valor.length < 5) {
+        this.dom.mostrar_error_campo("foto_persona", "foto_persona_min_size_KO");
+        return "foto_persona_min_size_KO";
+      }
+      if (valor.length > 20) {
+        this.dom.mostrar_error_campo("foto_persona", "foto_persona_max_size_KO");
+        return "foto_persona_max_size_KO";
+      }
+      if (!this.format("foto_persona", "^[a-zA-Z0-9_-]+\\.(jpe?g|JPE?G)$")) {
+        this.dom.mostrar_error_campo("foto_persona", "foto_persona_format_name_file_KO");
+        return "foto_persona_format_name_file_KO";
+      }
+    }
+
     this.dom.mostrar_exito_campo("foto_persona");
     return true;
   }
