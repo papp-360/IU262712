@@ -12,10 +12,12 @@ class Validations{
 		let elemento = document.getElementById(id);
 		switch (elemento.tagName){
 			case 'INPUT':
+			case 'TEXTAREA':
 				switch (elemento.type){
 					case 'number':
 					case 'email':
 					case 'text':
+					case 'textarea':
 						let valorelemento = elemento.value;
 						if (valorelemento.length<minsize){
 							return false;
@@ -47,10 +49,12 @@ class Validations{
 		let elemento = document.getElementById(id);
 		switch (elemento.tagName){
 			case 'INPUT':
+			case 'TEXTAREA':
 				switch (elemento.type){
 					case 'number':
 					case 'email':
 					case 'text':
+					case 'textarea':
 						let valorelemento = elemento.value;
 						if (valorelemento.length>maxsize){
 							return false;
