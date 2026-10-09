@@ -203,10 +203,19 @@ let persona_pruebas = Array(
     //--------------------telefono_persona--------------------
     ['persona', 'telefono_persona', 52, 55, 'ADD', { telefono_persona: '12345678' }, 'telefono_persona_format_ko'],
     ['persona', 'telefono_persona', 53, 56, 'ADD', { telefono_persona: '123456789' }, true],
-    ['persona', 'telefono_persona', 54, 57, 'EDIT', { telefono_persona: '12345678' }, 'telefono_persona_format_ko'],
-    ['persona', 'telefono_persona', 55, 58, 'EDIT', { telefono_persona: '123456789' }, true],
-    ['persona', 'telefono_persona', 56, 59, 'SEARCH', { telefono_persona: '12345678' }, 'telefono_persona_format_ko'],
-    ['persona', 'telefono_persona', 57, 60, 'SEARCH', { telefono_persona: '123456789' }, true],
+    ['persona', 'telefono_persona', 54, 57, 'ADD', { telefono_persona: '123467@8' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 55, 57, 'ADD', { telefono_persona: 'a1234678' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 56, 57, 'EDIT', { telefono_persona: '12345678' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 57, 58, 'EDIT', { telefono_persona: '123456789' }, true],
+    ['persona', 'telefono_persona', 58, 57, 'EDIT', { telefono_persona: '123467@8' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 59, 57, 'EDIT', { telefono_persona: 'a1234678' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 60, 59, 'SEARCH', { telefono_persona: '12345678' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 61, 60, 'SEARCH', { telefono_persona: '123456789' }, true],
+    ['persona', 'telefono_persona', 62, 57, 'SEARCH', { telefono_persona: '123467@8' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 63, 57, 'SEARCH', { telefono_persona: 'a1234678' }, 'telefono_persona_format_ko'],
+    
+
+     // a partir de aqui cambiar numero de pruebas
     //--------------------email_persona--------------------
     ['persona', 'email_persona', 58, 61, 'ADD', { email_persona: 'javi' }, 'email_persona_format_ko'],
     ['persona', 'email_persona', 59, 62, 'ADD', { email_persona: 'javi@ejemplo.com' }, true],
