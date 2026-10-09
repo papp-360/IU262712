@@ -354,12 +354,12 @@ let persona_pruebas = Array(
     ['persona', 'nuevo_foto_persona', 70, 94, 'ADD', { nuevo_foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'pdf', max_size_file: 2000 } }, 'nuevo_foto_persona_type_file_ko'],
     ['persona', 'nuevo_foto_persona', 71, 95, 'ADD', { nuevo_foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'image/jpeg', max_size_file: 2000000000 } }, 'nuevo_foto_persona_max_size_file_ko'],
     ['persona', 'nuevo_foto_persona', 72, 96, 'ADD', { nuevo_foto_persona: { format_name_file: 'a.jp', type_file: 'image/jpeg', max_size_file: 2000 } }, 'nuevo_foto_persona_min_size_ko'],
-    ['persona', 'nuevo_foto_persona', 73, 97, 'ADD', { nuevo_foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'image/jpeg', max_size_file: 2000 } }, true],
+    ['persona', 'nuevo_foto_persona', 73, 97, 'ADD', { nuevo_foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'image/jpeg', max_size_file: 20000 } }, true],
 
     // ---------EDIT------------------------------------------
     ['persona', 'nuevo_foto_persona', 74, 98, 'EDIT', { nuevo_foto_persona: { format_name_file: 'nombrejpg00.jpg', type_file: 'image/jpeg', max_size_file: 200 } }, 'nuevo_foto_persona_format_name_file_ko'],
     ['persona', 'nuevo_foto_persona', 75, 99, 'EDIT', { nuevo_foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'pdf', max_size_file: 2000 } }, 'nuevo_foto_persona_type_file_ko'],
-    ['persona', 'nuevo_foto_persona', 76, 100, 'EDIT', { nuevo_foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'image/jpeg', max_size_file: 2000000000 } }, 'nuevo_foto_persona_max_size_file_ko'],
+    ['persona', 'nuevo_foto_persona', 76, 100, 'EDIT', { nuevo_foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'image/jpeg', max_size_file: 20000000000 } }, 'nuevo_foto_persona_max_size_file_ko'],
     ['persona', 'nuevo_foto_persona', 77, 101, 'EDIT', { nuevo_foto_persona: { format_name_file: 'a.jp', type_file: 'image/jpeg', max_size_file: 2000 } }, 'nuevo_foto_persona_min_size_ko'],
     ['persona', 'nuevo_foto_persona', 78, 102, 'EDIT', { nuevo_foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'image/jpeg', max_size_file: 2000 } }, true],
 
