@@ -3,7 +3,7 @@ datosgenerales =
 	Lider:
 		["Ian Paul Pérez Tablante",
 			"ET1",
-			13],
+			14],
 
 	Participante1:
 		["Pablo Alejandro Puente Prieto",
@@ -18,7 +18,7 @@ datosgenerales =
 	Participante3:
 		["Sebastián Quero Prieto",
 			"ET1",
-			13]
+			13.5]
 
 
 }
