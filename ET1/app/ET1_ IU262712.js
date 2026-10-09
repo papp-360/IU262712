@@ -3,7 +3,7 @@ datosgenerales =
 	Lider:
 		["Ian Paul Pérez Tablante",
 			"ET1",
-			14],
+			14.5],
 
 	Participante1:
 		["Pablo Alejandro Puente Prieto",
