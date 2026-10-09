@@ -2,34 +2,42 @@
 
 var usuario_def_tests = [
 
-    // -------------------------------------------------------------
-    // ATRIBUTO: dni (input, 8 digitos y 1 letra)
-    // -------------------------------------------------------------
-    // --------- DNI ADD, EDIT, SEARCH -----------------------------
-    ['usuario', 'dni', 'input', 1, 'Validar formato dni en ADD', 'format', 'ADD', 'dni_format_ko', 'El Formato del DNI debe ser 8 numeros y una letra'],
-    ['usuario', 'dni', 'input', 2, 'Validar letra dni en ADD (modulo 23)', 'format', 'ADD', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
-    ['usuario', 'dni', 'input', 3, 'Validar dni correcto en ADD', 'valid', 'ADD', true, 'DNI correcto'],
-    ['usuario', 'dni', 'input', 4, 'Validar formato dni en EDIT', 'format', 'EDIT', 'dni_format_ko', 'El Formato del DNI debe ser 8 numeros y una letra'],
-    ['usuario', 'dni', 'input', 5, 'Validar letra dni en EDIT (modulo 23)', 'format', 'EDIT', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
-    ['usuario', 'dni', 'input', 6, 'Validar dni correcto en EDIT', 'valid', 'EDIT', true, 'DNI correcto en EDIT'],
-    ['usuario', 'dni', 'input', 7, 'Validar formato dni en SEARCH', 'format', 'SEARCH', 'dni_format_ko', 'Formato de DNI no valido en SEARCH'],
-    ['usuario', 'dni', 'input', 8, 'Validar dni correcto en SEARCH', 'valid', 'SEARCH', true, 'Busqueda por DNI correcta'],
+	// -------------------------------------------------------------
+	// ATRIBUTO: dni (input, 8 digitos y 1 letra)
+	// -------------------------------------------------------------
+	// ---------ADD-------------------------
+	['usuario', 'dni', 'input', 1, 'Validar formato dni en ADD', 'format', 'ADD', 'dni_format_ko', 'El Formato del DNI debe ser 8 numeros y una letra'],
+	['usuario', 'dni', 'input', 2, 'Validar letra dni en ADD (modulo 23)', 'format', 'ADD', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
+	['usuario', 'dni', 'input', 3, 'Validar dni correcto en ADD', 'valid', 'ADD', true, 'DNI correcto'],
 
-    // -------------------------------------------------------------
-    // ATRIBUTO: usuario (input, min 5 max 45, alfabetico sin ñ ni acentos)
-    // -------------------------------------------------------------
-    // --------- USUARIO ADD, EDIT, SEARCH -------------------------
-    ['usuario', 'usuario', 'input', 9, 'Validar min size usuario en ADD (min 5)', 'min_size', 'ADD', 'usuario_min_size_ko', 'El nombre de usuario es demasiado corto (minimo 5)'],
-    ['usuario', 'usuario', 'input', 10, 'Validar max size usuario en ADD (max 45)', 'max_size', 'ADD', 'usuario_max_size_ko', 'El nombre de usuario es demasiado largo (maximo 45)'],
-    ['usuario', 'usuario', 'input', 11, 'Validar format usuario en ADD (solo letras sin acentos ni ñ)', 'format', 'ADD', 'usuario_format_ko', 'El usuario solo permite caracteres alfabeticos sin acentos ni ñ'],
-    ['usuario', 'usuario', 'input', 12, 'Validar usuario correcto en ADD', 'valid', 'ADD', true, 'Usuario correcto'],
-    ['usuario', 'usuario', 'input', 13, 'Validar min size usuario en EDIT (min 5)', 'min_size', 'EDIT', 'usuario_min_size_ko', 'El nombre de usuario es demasiado corto en EDIT (minimo 5)'],
-    ['usuario', 'usuario', 'input', 14, 'Validar max size usuario en EDIT (max 45)', 'max_size', 'EDIT', 'usuario_max_size_ko', 'El nombre de usuario es demasiado largo en EDIT (maximo 45)'],
-    ['usuario', 'usuario', 'input', 15, 'Validar format usuario en EDIT', 'format', 'EDIT', 'usuario_format_ko', 'Caracteres no permitidos en usuario en EDIT'],
-    ['usuario', 'usuario', 'input', 16, 'Validar usuario correcto en EDIT', 'valid', 'EDIT', true, 'Usuario correcto en EDIT'],
-    ['usuario', 'usuario', 'input', 17, 'Validar max size usuario en SEARCH (max 45)', 'max_size', 'SEARCH', 'usuario_max_size_ko', 'El usuario excede el maximo permitido en SEARCH'],
-    ['usuario', 'usuario', 'input', 18, 'Validar format usuario en SEARCH', 'format', 'SEARCH', 'usuario_format_ko', 'Caracteres no permitidos en SEARCH'],
-    ['usuario', 'usuario', 'input', 19, 'Validar usuario correcto en SEARCH', 'valid', 'SEARCH', true, 'Busqueda de usuario correcta'],
+	// ---------EDIT-------------------------
+	['usuario', 'dni', 'input', 4, 'Validar formato dni en EDIT', 'format', 'EDIT', 'dni_format_ko', 'El Formato del DNI debe ser 8 numeros y una letra'],
+	['usuario', 'dni', 'input', 5, 'Validar letra dni en EDIT (modulo 23)', 'format', 'EDIT', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
+	['usuario', 'dni', 'input', 6, 'Validar dni correcto en EDIT', 'valid', 'EDIT', true, 'DNI correcto en EDIT'],
+
+	// ---------SEARCH-------------------------
+	['usuario', 'dni', 'input', 7, 'Validar formato dni en SEARCH', 'format', 'SEARCH', 'dni_format_ko', 'Formato de DNI no valido en SEARCH'],
+	['usuario', 'dni', 'input', 8, 'Validar dni correcto en SEARCH', 'valid', 'SEARCH', true, 'Busqueda por DNI correcta'],
+
+	// -------------------------------------------------------------
+	// ATRIBUTO: usuario (input, min 5 max 45, alfabetico sin ñ ni acentos)
+	// -------------------------------------------------------------
+	// ---------ADD-------------------------
+	['usuario', 'usuario', 'input', 9, 'Validar min size usuario en ADD (min 5)', 'min_size', 'ADD', 'usuario_min_size_ko', 'El nombre de usuario es demasiado corto (minimo 5)'],
+	['usuario', 'usuario', 'input', 10, 'Validar max size usuario en ADD (max 45)', 'max_size', 'ADD', 'usuario_max_size_ko', 'El nombre de usuario es demasiado largo (maximo 45)'],
+	['usuario', 'usuario', 'input', 11, 'Validar format usuario en ADD (solo letras sin acentos ni ñ)', 'format', 'ADD', 'usuario_format_ko', 'El usuario solo permite caracteres alfabeticos sin acentos ni ñ'],
+	['usuario', 'usuario', 'input', 12, 'Validar usuario correcto en ADD', 'valid', 'ADD', true, 'Usuario correcto'],
+
+	// ---------EDIT-------------------------
+	['usuario', 'usuario', 'input', 13, 'Validar min size usuario en EDIT (min 5)', 'min_size', 'EDIT', 'usuario_min_size_ko', 'El nombre de usuario es demasiado corto en EDIT (minimo 5)'],
+	['usuario', 'usuario', 'input', 14, 'Validar max size usuario en EDIT (max 45)', 'max_size', 'EDIT', 'usuario_max_size_ko', 'El nombre de usuario es demasiado largo en EDIT (maximo 45)'],
+	['usuario', 'usuario', 'input', 15, 'Validar format usuario en EDIT', 'format', 'EDIT', 'usuario_format_ko', 'Caracteres no permitidos en usuario en EDIT'],
+	['usuario', 'usuario', 'input', 16, 'Validar usuario correcto en EDIT', 'valid', 'EDIT', true, 'Usuario correcto en EDIT'],
+
+	// ---------SEARCH-------------------------
+	['usuario', 'usuario', 'input', 17, 'Validar max size usuario en SEARCH (max 45)', 'max_size', 'SEARCH', 'usuario_max_size_ko', 'El usuario excede el maximo permitido en SEARCH'],
+	['usuario', 'usuario', 'input', 18, 'Validar format usuario en SEARCH', 'format', 'SEARCH', 'usuario_format_ko', 'Caracteres no permitidos en SEARCH'],
+	['usuario', 'usuario', 'input', 19, 'Validar usuario correcto en SEARCH', 'valid', 'SEARCH', true, 'Busqueda de usuario correcta'],
 
 	// -------------------------------------------------------------
 	// ATRIBUTO: contrasena (input, min 8 max 45, alfabetico sin ñ ni acentos)
