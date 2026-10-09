@@ -174,7 +174,19 @@ let persona_pruebas = Array(
     ['persona', 'apellidos_persona', 39, 30, 'SEARCH', { apellidos_persona: 'javi' }, true],
  
     //--------------------fechaNacimiento_persona--------------------
- 
+    ['persona', 'fechaNacimiento_persona', 31, ,'ADD', { fechaNacimiento_persona: '09-10-2026'}, 'fechaNacimiento_persona_format_ko'],
+    ['persona', 'fechaNacimiento_persona', 32, ,'ADD', { fechaNacimiento_persona: '32/11/2026'}, 'fechaNacimiento_persona_fecha_valida_ko'],
+    ['persona', 'fechaNacimiento_persona', 33, ,'ADD', { fechaNacimiento_persona: '08/10/2026'}, 'fechaNacimiento_persona_fecha_anterior_actual_ko'],
+    ['persona', 'fechaNacimiento_persona', 34, ,'ADD', { fechaNacimiento_persona: '07/10/2026'}, true],
+    ['persona', 'fechaNacimiento_persona', 35, ,'EDIT', { fechaNacimiento_persona: '03 12 2025'}, 'fechaNacimiento_persona_format_ko'],
+    ['persona', 'fechaNacimiento_persona', 36, ,'EDIT', { fechaNacimiento_persona: '45/02/2026'}, 'fechaNacimiento_persona_fecha_valida_ko'],
+    ['persona', 'fechaNacimiento_persona', 37, ,'EDIT', { fechaNacimiento_persona: '03/10/2026'}, 'fechaNacimiento_persona_fecha_anterior_actual_ko'],
+    ['persona', 'fechaNacimiento_persona', 38, ,'EDIT', { fechaNacimiento_persona: '05/10/2026'}, true],
+    ['persona', 'fechaNacimiento_persona', 39, ,'SEARCH', { fechaNacimiento_persona: '07.12.2025'}, 'fechaNacimiento_persona_format_ko'],
+    ['persona', 'fechaNacimiento_persona', 40, ,'SEARCH', { fechaNacimiento_persona: '37/05/2026'}, 'fechaNacimiento_persona_fecha_valida_ko'],
+    ['persona', 'fechaNacimiento_persona', 41, ,'SEARCH', { fechaNacimiento_persona: '10/09/2026'}, 'fechaNacimiento_persona_fecha_anterior_actual_ko'],
+    ['persona', 'fechaNacimiento_persona', 42, ,'SEARCH', { fechaNacimiento_persona: '17/09/2026'}, true],
+
     //--------------------direccion_persona--------------------
     ['persona', 'direccion_persona', 40, 43, 'ADD', { direccion_persona: 'a' }, 'direccion_persona_min_size_ko'],
     ['persona', 'direccion_persona', 41, 44, 'ADD', { direccion_persona: 'a'.repeat(201) }, 'direccion_persona_max_size_ko'],
