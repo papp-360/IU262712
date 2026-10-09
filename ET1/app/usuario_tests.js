@@ -7,12 +7,12 @@ var usuario_def_tests = [
 	// -------------------------------------------------------------
 	// ---------ADD-------------------------
 	['usuario', 'dni', 'input', 1, 'Validar formato dni en ADD', 'format', 'ADD', 'dni_format_ko', 'El Formato del DNI debe ser 8 numeros y una letra'],
-	['usuario', 'dni', 'input', 2, 'Validar letra dni en ADD (modulo 23)', 'format', 'ADD', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
+	['usuario', 'dni', 'input', 2, 'Validar letra dni en ADD (modulo 23)', 'personalized', 'ADD', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
 	['usuario', 'dni', 'input', 3, 'Validar dni correcto en ADD', 'valid', 'ADD', true, 'DNI correcto'],
 
 	// ---------EDIT-------------------------
 	['usuario', 'dni', 'input', 4, 'Validar formato dni en EDIT', 'format', 'EDIT', 'dni_format_ko', 'El Formato del DNI debe ser 8 numeros y una letra'],
-	['usuario', 'dni', 'input', 5, 'Validar letra dni en EDIT (modulo 23)', 'format', 'EDIT', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
+	['usuario', 'dni', 'input', 5, 'Validar letra dni en EDIT (modulo 23)', 'personalized', 'EDIT', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
 	['usuario', 'dni', 'input', 6, 'Validar dni correcto en EDIT', 'valid', 'EDIT', true, 'DNI correcto en EDIT'],
 
 	// ---------SEARCH-------------------------
