@@ -571,6 +571,11 @@ class persona extends Validations {
     return true;
   }
 
+  SEARCH_contrasena_validation() {
+    this.dom.mostrar_exito_campo("contrasena");
+    return true;
+  }
+
 
   /**********************************************************************************************
     métodos adicionales
