@@ -439,6 +439,7 @@ class persona extends Validations {
   /**********************************************************************************************
     fields validations for SEARCH 
   ***********************************************************************************************/
+  //Revisar de cara ET2
   SEARCH_submit_persona() {
     return true;
   }
@@ -611,8 +612,7 @@ class persona extends Validations {
     if (!campo || campo.value === '') {
       return false;
     }
-
-
+    
   }
 }
 
