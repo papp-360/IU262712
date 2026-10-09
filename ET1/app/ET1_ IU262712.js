@@ -13,7 +13,7 @@ datosgenerales =
 	Participante2:
 		["Andrea Señoráns Ferreiro",
 			"ET1",
-			13],
+			12],
 
 	Participante3:
 		["Sebastián Quero Prieto",
