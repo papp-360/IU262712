@@ -201,7 +201,6 @@ let persona_pruebas = Array(
     ['persona', 'direccion_persona', 53, 62, 'SEARCH', { direccion_persona: 'aaaaaa1' }, 'direccion_persona_format_ko'],
     ['persona', 'direccion_persona', 54, 63, 'SEARCH', { direccion_persona: 'Calle de la Rosa, 12' }, true],
     //--------------------telefono_persona--------------------
-<<<<<<< HEAD
     ['persona', 'telefono_persona', 52, 64, 'ADD', { telefono_persona: '12345678' }, 'telefono_persona_format_ko'],
     ['persona', 'telefono_persona', 53, 65, 'ADD', { telefono_persona: '123456789' }, true],
     ['persona', 'telefono_persona', 54, 66, 'ADD', { telefono_persona: '123467@8' }, 'telefono_persona_format_ko'],
@@ -217,14 +216,7 @@ let persona_pruebas = Array(
 
 
     // a partir de aqui cambiar numero de pruebas
-=======
-    ['persona', 'telefono_persona', 55, 64, 'ADD', { telefono_persona: '12345678' }, 'telefono_persona_format_ko'],
-    ['persona', 'telefono_persona', 56, 65, 'ADD', { telefono_persona: '123456789' }, true],
-    ['persona', 'telefono_persona', 57, 66, 'EDIT', { telefono_persona: '12345678' }, 'telefono_persona_format_ko'],
-    ['persona', 'telefono_persona', 58, 67, 'EDIT', { telefono_persona: '123456789' }, true],
-    ['persona', 'telefono_persona', 59, 68, 'SEARCH', { telefono_persona: '12345678' }, 'telefono_persona_format_ko'],
-    ['persona', 'telefono_persona', 60, 69, 'SEARCH', { telefono_persona: '123456789' }, true],
->>>>>>> 80eac5e4e4071f052f37753978293680b1c21a8b
+
     //--------------------email_persona--------------------
     ['persona', 'email_persona', 61, 70, 'ADD', { email_persona: 'javi' }, 'email_persona_format_ko'],
     ['persona', 'email_persona', 62, 71, 'ADD', { email_persona: 'javi@ejemplo.com' }, true],
