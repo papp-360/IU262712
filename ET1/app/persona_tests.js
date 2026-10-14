@@ -8,9 +8,11 @@ let persona_def_tests = Array(
     // ATRIBUTO: dni (input, 8 digitos y 1 letra)
     // -------------------------------------------------------------
     // ---------ADD -----------------------------
-    ['persona', 'dni', 'input', 1, 'cumple formato', 'format', 'ADD', 'dni_format_ko', 'Formato inválido. Debe contener 8 números y una letra al final'],
-    ['persona', 'dni', 'input', 2, 'validar letra dni en ADD (modulo 23)', 'personalized', 'ADD', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
-    ['persona', 'dni', 'input', 3, 'es correcto', 'valid', 'ADD', true, 'DNI correcto'],
+    ['persona', 'dni', 'input', 1, 'cumple tamaño minimo', 'min_size', 'ADD', 'dni_format_ko', 'Formato inválido. Debe contener 8 números y una letra al final'],
+    ['persona', 'dni', 'input', 2, 'cumple tamaño maximo', 'max_size', 'ADD', 'dni_format_ko', 'Formato inválido. Debe contener 8 números y una letra al final'],
+    ['persona', 'dni', 'input', 3, 'cumple formato', 'format', 'ADD', 'dni_format_ko', 'Formato inválido. Debe contener 8 números y una letra al final'],
+    ['persona', 'dni', 'input', 4, 'validar letra dni en ADD (modulo 23)', 'personalized', 'ADD', 'dni_letra_ko', 'La letra del DNI no se corresponde con los numeros'],
+    ['persona', 'dni', 'input', 5, 'es correcto', 'valid', 'ADD', true, 'DNI correcto'],
 
     // ---------EDIT-----------------------------
     ['persona', 'dni', 'input', 4, 'cumple formato', 'format', 'EDIT', 'dni_format_ko', 'Formato inválido. Debe contener 8 números y una letra al final'],
@@ -181,7 +183,37 @@ let persona_def_tests = Array(
     ['persona', 'foto_persona', 'file', 95, 'Comprobar tipo fichero', 'format', 'SEARCH', 'foto_persona_type_file_ko', 'El tipo de fichero es incorrecto'],
     ['persona', 'foto_persona', 'file', 96, 'Comprobar tamaño fichero', 'max_size', 'SEARCH', 'foto_persona_max_size_file_ko', 'El tamaño del archivo es demasiado grande'],
     ['persona', 'foto_persona', 'file', 97, 'Comprobar tamaño minimo nombre', 'min_size', 'SEARCH', 'foto_persona_min_size_ko', 'El nombre del archivo es demasiado corto'],
-    ['persona', 'foto_persona', 'file', 98, 'Comprobar valor correcto', 'valid', 'SEARCH', true, 'Fichero correcto']
+    ['persona', 'foto_persona', 'file', 98, 'Comprobar valor correcto', 'valid', 'SEARCH', true, 'Fichero correcto'],
+
+    // -------------------------------------------------------------
+    // ATRIBUTO: fechaNacimiento_persona (input, 10 caracteres)
+    // -------------------------------------------------------------
+    ['persona', 'fechaNacimiento_persona', 'input', 99, 'cumple tamaño minimo', 'min_size', 'ADD', 'fechaNacimiento_persona_format_ko', 'Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona', 'fechaNacimiento_persona', 'input', 100, 'cumple tamaño maximo', 'max_size', 'ADD', 'fechaNacimiento_persona_format_ko', 'Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona', 'fechaNacimiento_persona', 'input', 101, 'cumple tamaño minimo', 'min_size', 'EDIT', 'fechaNacimiento_persona_format_ko', 'Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona', 'fechaNacimiento_persona', 'input', 102, 'cumple tamaño maximo', 'max_size', 'EDIT', 'fechaNacimiento_persona_format_ko', 'Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona', 'fechaNacimiento_persona', 'input', 103, 'cumple tamaño minimo', 'min_size', 'SEARCH', 'fechaNacimiento_persona_format_ko', 'Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+    ['persona', 'fechaNacimiento_persona', 'input', 104, 'cumple tamaño maximo', 'max_size', 'SEARCH', 'fechaNacimiento_persona_format_ko', 'Formato inválido. Debe seguir el formato dd/mm/aaaa'],
+
+    // -------------------------------------------------------------
+    // ATRIBUTO: telefono_persona (input, 9 caracteres)
+    // -------------------------------------------------------------
+    ['persona', 'telefono_persona', 'input', 105, 'cumple tamaño minimo', 'min_size', 'ADD', 'telefono_persona_format_ko', 'Formato inválido. Deben ser 9 números'],
+    ['persona', 'telefono_persona', 'input', 106, 'cumple tamaño maximo', 'max_size', 'ADD', 'telefono_persona_format_ko', 'Formato inválido. Deben ser 9 números'],
+    ['persona', 'telefono_persona', 'input', 107, 'cumple tamaño minimo', 'min_size', 'EDIT', 'telefono_persona_format_ko', 'Formato inválido. Deben ser 9 números'],
+    ['persona', 'telefono_persona', 'input', 108, 'cumple tamaño maximo', 'max_size', 'EDIT', 'telefono_persona_format_ko', 'Formato inválido. Deben ser 9 números'],
+    ['persona', 'telefono_persona', 'input', 109, 'cumple tamaño minimo', 'min_size', 'SEARCH', 'telefono_persona_format_ko', 'Formato inválido. Deben ser 9 números'],
+    ['persona', 'telefono_persona', 'input', 110, 'cumple tamaño maximo', 'max_size', 'SEARCH', 'telefono_persona_format_ko', 'Formato inválido. Deben ser 9 números'],
+
+    // -------------------------------------------------------------
+    // ATRIBUTO: email_persona (input, min 6 max 30)
+    // -------------------------------------------------------------
+    ['persona', 'email_persona', 'input', 111, 'cumple tamaño minimo', 'min_size', 'ADD', 'email_persona_min_size_ko', 'Tamaño muy corto. Debe estar entre 6 y 30 caracteres'],
+    ['persona', 'email_persona', 'input', 112, 'cumple tamaño maximo', 'max_size', 'ADD', 'email_persona_max_size_ko', 'Tamaño muy grande. Debe estar entre 6 y 30 caracteres'],
+    ['persona', 'email_persona', 'input', 113, 'cumple tamaño minimo', 'min_size', 'EDIT', 'email_persona_min_size_ko', 'Tamaño muy corto. Debe estar entre 6 y 30 caracteres'],
+    ['persona', 'email_persona', 'input', 114, 'cumple tamaño maximo', 'max_size', 'EDIT', 'email_persona_max_size_ko', 'Tamaño muy grande. Debe estar entre 6 y 30 caracteres'],
+    ['persona', 'email_persona', 'input', 115, 'cumple tamaño minimo', 'min_size', 'SEARCH', 'email_persona_min_size_ko', 'Tamaño muy corto. Debe estar entre 6 y 30 caracteres'],
+    ['persona', 'email_persona', 'input', 116, 'cumple tamaño maximo', 'max_size', 'SEARCH', 'email_persona_max_size_ko', 'Tamaño muy grande. Debe estar entre 6 y 30 caracteres']
 );
 
 
@@ -394,5 +426,35 @@ let persona_pruebas = Array(
     ['persona', 'foto_persona', 96, 121, 'SEARCH', { foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'image/jpeg', max_size_file: 2000000000 } }, 'foto_persona_max_size_file_ko'],
     ['persona', 'foto_persona', 97, 122, 'SEARCH', { foto_persona: { format_name_file: 'a.jp', type_file: 'image/jpeg', max_size_file: 2000 } }, 'foto_persona_min_size_ko'],
     ['persona', 'foto_persona', 98, 123, 'SEARCH', { foto_persona: '' }, true],
-    ['persona', 'foto_persona', 98, 124, 'SEARCH', { foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'image/jpeg', max_size_file: 2000 } }, true]
+    ['persona', 'foto_persona', 98, 124, 'SEARCH', { foto_persona: { format_name_file: 'nombrejpg.jpg', type_file: 'image/jpeg', max_size_file: 2000 } }, true],
+
+    // -------------------------------------------------------------
+    // ATRIBUTO: fechaNacimiento_persona (input, 10 caracteres)
+    // -------------------------------------------------------------
+    ['persona', 'fechaNacimiento_persona', 99, 125, 'ADD', { fechaNacimiento_persona: '1/1/20' }, 'fechaNacimiento_persona_format_ko'],
+    ['persona', 'fechaNacimiento_persona', 100, 126, 'ADD', { fechaNacimiento_persona: '01/01/20000' }, 'fechaNacimiento_persona_format_ko'],
+    ['persona', 'fechaNacimiento_persona', 101, 127, 'EDIT', { fechaNacimiento_persona: '1/1/20' }, 'fechaNacimiento_persona_format_ko'],
+    ['persona', 'fechaNacimiento_persona', 102, 128, 'EDIT', { fechaNacimiento_persona: '01/01/20000' }, 'fechaNacimiento_persona_format_ko'],
+    ['persona', 'fechaNacimiento_persona', 103, 129, 'SEARCH', { fechaNacimiento_persona: '1/1/20' }, 'fechaNacimiento_persona_format_ko'],
+    ['persona', 'fechaNacimiento_persona', 104, 130, 'SEARCH', { fechaNacimiento_persona: '01/01/20000' }, 'fechaNacimiento_persona_format_ko'],
+
+    // -------------------------------------------------------------
+    // ATRIBUTO: telefono_persona (input, 9 caracteres)
+    // -------------------------------------------------------------
+    ['persona', 'telefono_persona', 105, 131, 'ADD', { telefono_persona: '62345678' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 106, 132, 'ADD', { telefono_persona: '6234567890' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 107, 133, 'EDIT', { telefono_persona: '62345678' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 108, 134, 'EDIT', { telefono_persona: '6234567890' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 109, 135, 'SEARCH', { telefono_persona: '62345678' }, 'telefono_persona_format_ko'],
+    ['persona', 'telefono_persona', 110, 136, 'SEARCH', { telefono_persona: '6234567890' }, 'telefono_persona_format_ko'],
+
+    // -------------------------------------------------------------
+    // ATRIBUTO: email_persona (input, min 6 max 30)
+    // -------------------------------------------------------------
+    ['persona', 'email_persona', 111, 137, 'ADD', { email_persona: 'a@b.c' }, 'email_persona_min_size_ko'],
+    ['persona', 'email_persona', 112, 138, 'ADD', { email_persona: `${'a'.repeat(26)}@b.cc` }, 'email_persona_max_size_ko'],
+    ['persona', 'email_persona', 113, 139, 'EDIT', { email_persona: 'a@b.c' }, 'email_persona_min_size_ko'],
+    ['persona', 'email_persona', 114, 140, 'EDIT', { email_persona: `${'a'.repeat(26)}@b.cc` }, 'email_persona_max_size_ko'],
+    ['persona', 'email_persona', 115, 141, 'SEARCH', { email_persona: 'a@b.c' }, 'email_persona_min_size_ko'],
+    ['persona', 'email_persona', 116, 142, 'SEARCH', { email_persona: `${'a'.repeat(26)}@b.cc` }, 'email_persona_max_size_ko']
 );
